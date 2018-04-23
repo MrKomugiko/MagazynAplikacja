@@ -18,7 +18,7 @@ namespace MagazynAplikacja
             InitializeComponent();
         }
 
-        private void btn_loadXML_Click(object sender, EventArgs e)
+        private void Btn_loadXML_Click(object sender, EventArgs e)
         {
             string wynik = " ";
             OpenFileDialog ofd = new OpenFileDialog();
@@ -31,11 +31,10 @@ namespace MagazynAplikacja
 
                 for (int i = 0; i < myDiv.Count; i++)
                 {
-                    wynik += myDiv[i].InnerText;
-                    wynik += " \n ";
+                    wynik += "["+(i+1)+"] "+myDiv[i].InnerText + " \n ";
                 }
 
-                MessageBox.Show(wynik);
+                label_WynikDostawcy.Text = wynik;
             }
         }
     }
