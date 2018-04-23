@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Ludzie>
+  <Osoby>
+    <Imie>Kamil</Imie>
+    <Nazwisko>Mąka</Nazwisko>
+    <Wiek>22</Wiek>
+    <Rok>1995</Rok>
+  </Osoby>
+</Ludzie>
