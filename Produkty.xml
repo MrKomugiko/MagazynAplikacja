@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Faktura>
+  <Produkt>
+    <Nazwa>ASUS GL552VW</Nazwa>
+    <Cena_Brutto>3799,00</Cena_Brutto>
+    <Vat>23%</Vat>
+    <Cena_Vat>873,77</Cena_Vat>
+    <Cena_Netto>2925,23</Cena_Netto>
+    <Dostawca>Firma Krzak sp. z o.o.</Dostawca>
+  </Produkt>
+
+  <Produkt>
+    <Nazwa>Keczup</Nazwa>
+    <Cena_Brutto>5</Cena_Brutto>
+    <Vat>23%</Vat>
+    <Cena_Vat>1,15</Cena_Vat>
+    <Cena_Netto>3,85</Cena_Netto>
+    <Dostawca>Farutex sp. z o.o.</Dostawca>
+  </Produkt>
+  
+</Faktura>

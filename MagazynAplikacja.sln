@@ -5,6 +5,12 @@ VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagazynAplikacja", "MagazynAplikacja\MagazynAplikacja.csproj", "{CB814596-141B-4353-833B-5EF536D69728}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pliki XML", "Pliki XML", "{37320FEC-885E-4436-A79E-10B05044E3F5}"
+	ProjectSection(SolutionItems) = preProject
+		Dostawcy.xml = Dostawcy.xml
+		Produkty.xml = Produkty.xml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
