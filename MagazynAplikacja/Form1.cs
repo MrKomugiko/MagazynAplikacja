@@ -13,9 +13,19 @@ namespace MagazynAplikacja
 {
     public partial class Form1 : Form
     {
+        List<Panel> listPanel = new List<Panel>();
+
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+            listPanel.Add(panel_Magazyn);      
+            listPanel.Add(panel_Zamowienia);    
+            UkryjPanele();
         }
 
         /* OFF */ private void Btn_loadXML_Click(object sender, EventArgs e)
@@ -153,6 +163,32 @@ namespace MagazynAplikacja
         /* EMPTY */ private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void Btn_Magazyn_Click(object sender, EventArgs e)
+        {
+            UkryjPanele();
+            listPanel[0].BringToFront();  
+        }
+
+        private void Btn_Zamowienia_Click(object sender, EventArgs e)
+        {
+            UkryjPanele();
+            listPanel[1].BringToFront();
+        }
+
+        public void UkryjPanele()
+        {
+            for (int i = 0; i < listPanel.Count(); i++)
+            {
+                listPanel[i].SendToBack();
+            }
+            
+        }
+
+        private void Btn_Dostawa_Click(object sender, EventArgs e)
+        {
+            UkryjPanele();
         }
     }
 }
