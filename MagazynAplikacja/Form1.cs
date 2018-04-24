@@ -18,24 +18,24 @@ namespace MagazynAplikacja
             InitializeComponent();
         }
 
-        private void Btn_loadXML_Click(object sender, EventArgs e)
+        /* OFF */ private void Btn_loadXML_Click(object sender, EventArgs e)
         {
-            string wynik = " ";
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "XML|*.xml";
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                XmlDocument xDoc = new XmlDocument();
-                xDoc.Load(ofd.FileName);
-                var myDiv = xDoc.DocumentElement.SelectNodes("//Faktura/Dostawca/Nazwa");
+        //    string wynik = " ";
+        //    OpenFileDialog ofd = new OpenFileDialog();
+        //    ofd.Filter = "XML|*.xml";
+        //    if (ofd.ShowDialog() == DialogResult.OK)
+        //    {
+        //        XmlDocument xDoc = new XmlDocument();
+        //        xDoc.Load(ofd.FileName);
+        //        var myDiv = xDoc.DocumentElement.SelectNodes("//Faktura/Dostawca/Nazwa");
 
-                for (int i = 0; i < myDiv.Count; i++)
-                {
-                    wynik += "[" + (i + 1) + "] " + myDiv[i].InnerText + " \n ";
-                }
+        //        for (int i = 0; i < myDiv.Count; i++)
+        //        {
+        //            wynik += "[" + (i + 1) + "] " + myDiv[i].InnerText + " \n ";
+        //        }
 
-                label_WynikDostawcy.Text = wynik;
-            }
+        //        label_WynikDostawcy.Text = wynik;
+        //    }
         }
 
         private void button_Dodaj_Click(object sender, EventArgs e)
@@ -45,10 +45,12 @@ namespace MagazynAplikacja
             dataGridView1.Rows[n].Cells[1].Value = textBox_Netto.Text;
             dataGridView1.Rows[n].Cells[2].Value = textBox_VAT.Text;
             dataGridView1.Rows[n].Cells[3].Value = textBox_Brutto.Text;
+            dataGridView1.Rows[n].Cells[4].Value = textBox_ilosc.Text;
+            dataGridView1.Rows[n].Cells[5].Value = (Convert.ToDouble(textBox_ilosc.Text) * Convert.ToDouble(textBox_Netto.Text));
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        /* EMPTY */ private void label1_Click(object sender, EventArgs e)
         {
 
         }
@@ -71,6 +73,8 @@ namespace MagazynAplikacja
             dt1.Columns.Add("Wartość_Netto");
             dt1.Columns.Add("Podatek");
             dt1.Columns.Add("Wartość_Brutto");
+            dt1.Columns.Add("Ilosc");
+            dt1.Columns.Add("Wartosc_calkowita_netto");
             ds.Tables.Add(dt1);
 
             DataRow row = ds.Tables["Dostawca"].NewRow();
@@ -88,9 +92,11 @@ namespace MagazynAplikacja
                 row1["Wartość_Netto"]   = r.Cells[1].Value;
                 row1["Podatek"]         = r.Cells[2].Value;
                 row1["Wartość_Brutto"]  = r.Cells[3].Value;
+                row1["Ilosc"]           = r.Cells[4].Value;
+                row1["Wartosc_calkowita_netto"] = r.Cells[5].Value;
                 ds.Tables["Produkt"].Rows.Add(row1);
             }
-            ds.WriteXml("C:\\Users\\Kuba\\Data.xml");
+            ds.WriteXml("C:\\Users\\MrKom\\Data.xml");
             
             
         }
@@ -98,7 +104,7 @@ namespace MagazynAplikacja
         private void button_Zaladuj_Click(object sender, EventArgs e)
         {
             DataSet ds = new DataSet();
-            ds.ReadXml("C:\\Users\\Kuba\\Data.xml");
+            ds.ReadXml("C:\\Users\\MrKom\\Data.xml");
             textBox2_Nazwa.Text = ds.Tables["Dostawca"].Rows[0][0].ToString();
             textBox2_NIP.Text = ds.Tables["Dostawca"].Rows[0][1].ToString();
             textBox2_Adres.Text = ds.Tables["Dostawca"].Rows[0][2].ToString();
@@ -111,6 +117,8 @@ namespace MagazynAplikacja
                 dataGridView1.Rows[n].Cells[1].Value = item["Wartość_Netto"].ToString();
                 dataGridView1.Rows[n].Cells[2].Value = item["Podatek"].ToString();
                 dataGridView1.Rows[n].Cells[3].Value = item["Wartość_Brutto"].ToString();
+                dataGridView1.Rows[n].Cells[4].Value = item["Ilosc"].ToString();
+                dataGridView1.Rows[n].Cells[4].Value = item["Wartosc_calkowita_netto"].ToString();
 
             }
         }
@@ -121,6 +129,8 @@ namespace MagazynAplikacja
             textBox_Netto.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
             textBox_VAT.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
             textBox_Brutto.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+            textBox_ilosc.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+
         }
 
         private void button_Edytuj_Click(object sender, EventArgs e)
@@ -129,12 +139,20 @@ namespace MagazynAplikacja
             dataGridView1.SelectedRows[0].Cells[1].Value = textBox_Netto.Text;
             dataGridView1.SelectedRows[0].Cells[2].Value = textBox_VAT.Text;
             dataGridView1.SelectedRows[0].Cells[3].Value = textBox_Brutto.Text;
-       
+            dataGridView1.SelectedRows[0].Cells[4].Value = textBox_ilosc.Text;
+            dataGridView1.SelectedRows[0].Cells[5].Value = (Convert.ToDouble(textBox_ilosc.Text) * Convert.ToDouble(textBox_Netto.Text));
+
+
         }
 
         private void button_Usun_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
+        }
+
+        /* EMPTY */ private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
