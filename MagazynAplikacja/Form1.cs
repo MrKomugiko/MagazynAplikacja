@@ -118,7 +118,7 @@ namespace MagazynAplikacja
                 dataGridView1.Rows[n].Cells[2].Value = item["Podatek"].ToString();
                 dataGridView1.Rows[n].Cells[3].Value = item["Wartość_Brutto"].ToString();
                 dataGridView1.Rows[n].Cells[4].Value = item["Ilosc"].ToString();
-                dataGridView1.Rows[n].Cells[4].Value = item["Wartosc_calkowita_netto"].ToString();
+                dataGridView1.Rows[n].Cells[5].Value = item["Wartosc_calkowita_netto"].ToString();
 
             }
         }
