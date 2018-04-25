@@ -62,9 +62,9 @@ namespace MagazynAplikacja
             dataGridView1.Rows[n].Cells[0].Value = textBox_Nazwa.Text;
             dataGridView1.Rows[n].Cells[1].Value = textBox_Netto.Text;
             dataGridView1.Rows[n].Cells[2].Value = textBox_VAT.Text;
-            dataGridView1.Rows[n].Cells[3].Value = textBox_Brutto.Text;
+            dataGridView1.Rows[n].Cells[3].Value = (Convert.ToDouble(textBox_Netto.Text) * (Convert.ToDouble(textBox_VAT.Text) / 100) + 1);
             dataGridView1.Rows[n].Cells[4].Value = textBox_ilosc.Text;
-            dataGridView1.Rows[n].Cells[5].Value = (Convert.ToDouble(textBox_ilosc.Text) * Convert.ToDouble(textBox_Netto.Text));
+            dataGridView1.Rows[n].Cells[5].Value = (Convert.ToDouble(textBox_ilosc.Text) * Convert.ToDouble(textBox_Netto.Text) * ((Convert.ToDouble(textBox_VAT.Text)/100) + 1));
 
         }
 
@@ -92,7 +92,7 @@ namespace MagazynAplikacja
             dt1.Columns.Add("Podatek");
             dt1.Columns.Add("Wartość_Brutto");
             dt1.Columns.Add("Ilosc");
-            dt1.Columns.Add("Wartosc_calkowita_netto");
+            dt1.Columns.Add("Wartosc_calkowita_brutto");
             ds.Tables.Add(dt1);
 
             DataRow row = ds.Tables["Dostawca"].NewRow();
@@ -111,10 +111,10 @@ namespace MagazynAplikacja
                 row1["Podatek"]         = r.Cells[2].Value;
                 row1["Wartość_Brutto"]  = r.Cells[3].Value;
                 row1["Ilosc"]           = r.Cells[4].Value;
-                row1["Wartosc_calkowita_netto"] = r.Cells[5].Value;
+                row1["Wartosc_calkowita_brutto"] = r.Cells[5].Value;
                 ds.Tables["Produkt"].Rows.Add(row1);
             }
-            ds.WriteXml("C:\\Users\\MrKom\\Data.xml");
+            ds.WriteXml("C:\\Users\\Kuba\\Data.xml");
             
             
         }
@@ -122,7 +122,7 @@ namespace MagazynAplikacja
         private void button_Zaladuj_Click(object sender, EventArgs e)
         {
             DataSet ds = new DataSet();
-            ds.ReadXml("C:\\Users\\MrKom\\Data.xml");
+            ds.ReadXml("C:\\Users\\Kuba\\Data.xml");
             textBox2_Nazwa.Text = ds.Tables["Dostawca"].Rows[0][0].ToString();
             textBox2_NIP.Text = ds.Tables["Dostawca"].Rows[0][1].ToString();
             textBox2_Adres.Text = ds.Tables["Dostawca"].Rows[0][2].ToString();
@@ -136,7 +136,7 @@ namespace MagazynAplikacja
                 dataGridView1.Rows[n].Cells[2].Value = item["Podatek"].ToString();
                 dataGridView1.Rows[n].Cells[3].Value = item["Wartość_Brutto"].ToString();
                 dataGridView1.Rows[n].Cells[4].Value = item["Ilosc"].ToString();
-                dataGridView1.Rows[n].Cells[5].Value = item["Wartosc_calkowita_netto"].ToString();
+                dataGridView1.Rows[n].Cells[5].Value = item["Wartosc_calkowita_brutto"].ToString();
 
             }
         }
@@ -146,7 +146,7 @@ namespace MagazynAplikacja
             textBox_Nazwa.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
             textBox_Netto.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
             textBox_VAT.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
-            textBox_Brutto.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+            //textBox_Brutto.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
             textBox_ilosc.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
 
         }
@@ -156,7 +156,7 @@ namespace MagazynAplikacja
             dataGridView1.SelectedRows[0].Cells[0].Value = textBox_Nazwa.Text;
             dataGridView1.SelectedRows[0].Cells[1].Value = textBox_Netto.Text;
             dataGridView1.SelectedRows[0].Cells[2].Value = textBox_VAT.Text;
-            dataGridView1.SelectedRows[0].Cells[3].Value = textBox_Brutto.Text;
+           //dataGridView1.SelectedRows[0].Cells[3].Value = textBox_Brutto.Text;
             dataGridView1.SelectedRows[0].Cells[4].Value = textBox_ilosc.Text;
             dataGridView1.SelectedRows[0].Cells[5].Value = (Convert.ToDouble(textBox_ilosc.Text) * Convert.ToDouble(textBox_Netto.Text));
 
