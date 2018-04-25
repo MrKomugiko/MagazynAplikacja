@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Btn_loadXML = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -70,11 +71,33 @@
             this.panel_Zamowienia = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.Btn_Dostawa = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Btn_Dostawa2 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.panel_Dostawa_Main = new System.Windows.Forms.Panel();
+            this.Btn_Dostawca_Export = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.Btn_Dostawca_Import = new System.Windows.Forms.Button();
+            this.Btn_Dostawca_Edit = new System.Windows.Forms.Button();
+            this.Btn_Dostawca_New = new System.Windows.Forms.Button();
+            this.Btn_Dostawca_Select = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kontrahentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nazwaskroconaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nIPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.miejscowoscDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grupaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dostawcyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel_Magazyn.SuspendLayout();
             this.panel_Zamowienia.SuspendLayout();
+            this.panel_Dostawa_Main.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dostawcyBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Btn_loadXML
@@ -463,14 +486,15 @@
             this.Btn_Dostawa.UseVisualStyleBackColor = true;
             this.Btn_Dostawa.Click += new System.EventHandler(this.Btn_Dostawa_Click);
             // 
-            // button1
+            // Btn_Dostawa2
             // 
-            this.button1.Location = new System.Drawing.Point(12, 9);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(147, 50);
-            this.button1.TabIndex = 39;
-            this.button1.Text = "EMPTY 1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Btn_Dostawa2.Location = new System.Drawing.Point(12, 9);
+            this.Btn_Dostawa2.Name = "Btn_Dostawa2";
+            this.Btn_Dostawa2.Size = new System.Drawing.Size(147, 50);
+            this.Btn_Dostawa2.TabIndex = 39;
+            this.Btn_Dostawa2.Text = "Dostawa NEW";
+            this.Btn_Dostawa2.UseVisualStyleBackColor = true;
+            this.Btn_Dostawa2.Click += new System.EventHandler(this.Btn_Dostawa2_Click);
             // 
             // button2
             // 
@@ -481,12 +505,204 @@
             this.button2.Text = "EMPTY 2";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // panel_Dostawa_Main
+            // 
+            this.panel_Dostawa_Main.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel_Dostawa_Main.Controls.Add(this.Btn_Dostawca_Export);
+            this.panel_Dostawa_Main.Controls.Add(this.dataGridView2);
+            this.panel_Dostawa_Main.Controls.Add(this.button8);
+            this.panel_Dostawa_Main.Controls.Add(this.button7);
+            this.panel_Dostawa_Main.Controls.Add(this.Btn_Dostawca_Import);
+            this.panel_Dostawa_Main.Controls.Add(this.Btn_Dostawca_Edit);
+            this.panel_Dostawa_Main.Controls.Add(this.Btn_Dostawca_New);
+            this.panel_Dostawa_Main.Controls.Add(this.Btn_Dostawca_Select);
+            this.panel_Dostawa_Main.Controls.Add(this.label14);
+            this.panel_Dostawa_Main.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.panel_Dostawa_Main.Location = new System.Drawing.Point(173, 12);
+            this.panel_Dostawa_Main.Name = "panel_Dostawa_Main";
+            this.panel_Dostawa_Main.Size = new System.Drawing.Size(1024, 707);
+            this.panel_Dostawa_Main.TabIndex = 1;
+            // 
+            // Btn_Dostawca_Export
+            // 
+            this.Btn_Dostawca_Export.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Btn_Dostawca_Export.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Btn_Dostawca_Export.Location = new System.Drawing.Point(805, 17);
+            this.Btn_Dostawca_Export.Name = "Btn_Dostawca_Export";
+            this.Btn_Dostawca_Export.Size = new System.Drawing.Size(147, 50);
+            this.Btn_Dostawca_Export.TabIndex = 47;
+            this.Btn_Dostawca_Export.Text = "EXPORT";
+            this.Btn_Dostawca_Export.UseVisualStyleBackColor = false;
+            this.Btn_Dostawca_Export.Click += new System.EventHandler(this.Btn_Dostawca_Export_Click);
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.kontrahentDataGridViewTextBoxColumn,
+            this.nazwaskroconaDataGridViewTextBoxColumn,
+            this.nIPDataGridViewTextBoxColumn,
+            this.adressDataGridViewTextBoxColumn,
+            this.miejscowoscDataGridViewTextBoxColumn,
+            this.kodDataGridViewTextBoxColumn,
+            this.grupaDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.dostawcyBindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(13, 77);
+            this.dataGridView2.MultiSelect = false;
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(993, 560);
+            this.dataGridView2.TabIndex = 46;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button8.Location = new System.Drawing.Point(859, 643);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(147, 50);
+            this.button8.TabIndex = 45;
+            this.button8.Text = "NEXT";
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button7.Location = new System.Drawing.Point(13, 643);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(147, 50);
+            this.button7.TabIndex = 44;
+            this.button7.Text = "BACK";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // Btn_Dostawca_Import
+            // 
+            this.Btn_Dostawca_Import.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Btn_Dostawca_Import.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Btn_Dostawca_Import.Location = new System.Drawing.Point(73, 17);
+            this.Btn_Dostawca_Import.Name = "Btn_Dostawca_Import";
+            this.Btn_Dostawca_Import.Size = new System.Drawing.Size(147, 50);
+            this.Btn_Dostawca_Import.TabIndex = 40;
+            this.Btn_Dostawca_Import.Text = "IMPORT";
+            this.Btn_Dostawca_Import.UseVisualStyleBackColor = false;
+            this.Btn_Dostawca_Import.Click += new System.EventHandler(this.Btn_Dostawca_Import_Click);
+            // 
+            // Btn_Dostawca_Edit
+            // 
+            this.Btn_Dostawca_Edit.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Btn_Dostawca_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Btn_Dostawca_Edit.Location = new System.Drawing.Point(439, 17);
+            this.Btn_Dostawca_Edit.Name = "Btn_Dostawca_Edit";
+            this.Btn_Dostawca_Edit.Size = new System.Drawing.Size(147, 50);
+            this.Btn_Dostawca_Edit.TabIndex = 42;
+            this.Btn_Dostawca_Edit.Text = "EDIT";
+            this.Btn_Dostawca_Edit.UseVisualStyleBackColor = false;
+            // 
+            // Btn_Dostawca_New
+            // 
+            this.Btn_Dostawca_New.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Btn_Dostawca_New.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Btn_Dostawca_New.Location = new System.Drawing.Point(622, 17);
+            this.Btn_Dostawca_New.Name = "Btn_Dostawca_New";
+            this.Btn_Dostawca_New.Size = new System.Drawing.Size(147, 50);
+            this.Btn_Dostawca_New.TabIndex = 43;
+            this.Btn_Dostawca_New.Text = "NEW";
+            this.Btn_Dostawca_New.UseVisualStyleBackColor = false;
+            this.Btn_Dostawca_New.Click += new System.EventHandler(this.Btn_Dostawca_New_Click);
+            // 
+            // Btn_Dostawca_Select
+            // 
+            this.Btn_Dostawca_Select.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Btn_Dostawca_Select.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Btn_Dostawca_Select.Location = new System.Drawing.Point(256, 17);
+            this.Btn_Dostawca_Select.Name = "Btn_Dostawca_Select";
+            this.Btn_Dostawca_Select.Size = new System.Drawing.Size(147, 50);
+            this.Btn_Dostawca_Select.TabIndex = 41;
+            this.Btn_Dostawca_Select.Text = "SELECT";
+            this.Btn_Dostawca_Select.UseVisualStyleBackColor = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(902, 17);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(0, 29);
+            this.label14.TabIndex = 0;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Width = 64;
+            // 
+            // kontrahentDataGridViewTextBoxColumn
+            // 
+            this.kontrahentDataGridViewTextBoxColumn.DataPropertyName = "Kontrahent";
+            this.kontrahentDataGridViewTextBoxColumn.HeaderText = "Kontrahent";
+            this.kontrahentDataGridViewTextBoxColumn.Name = "kontrahentDataGridViewTextBoxColumn";
+            this.kontrahentDataGridViewTextBoxColumn.Width = 175;
+            // 
+            // nazwaskroconaDataGridViewTextBoxColumn
+            // 
+            this.nazwaskroconaDataGridViewTextBoxColumn.DataPropertyName = "Nazwa_skrocona";
+            this.nazwaskroconaDataGridViewTextBoxColumn.HeaderText = "Nazwa_skrocona";
+            this.nazwaskroconaDataGridViewTextBoxColumn.Name = "nazwaskroconaDataGridViewTextBoxColumn";
+            this.nazwaskroconaDataGridViewTextBoxColumn.Width = 250;
+            // 
+            // nIPDataGridViewTextBoxColumn
+            // 
+            this.nIPDataGridViewTextBoxColumn.DataPropertyName = "NIP";
+            this.nIPDataGridViewTextBoxColumn.HeaderText = "NIP";
+            this.nIPDataGridViewTextBoxColumn.Name = "nIPDataGridViewTextBoxColumn";
+            this.nIPDataGridViewTextBoxColumn.Width = 86;
+            // 
+            // adressDataGridViewTextBoxColumn
+            // 
+            this.adressDataGridViewTextBoxColumn.DataPropertyName = "Adress";
+            this.adressDataGridViewTextBoxColumn.HeaderText = "Adress";
+            this.adressDataGridViewTextBoxColumn.Name = "adressDataGridViewTextBoxColumn";
+            this.adressDataGridViewTextBoxColumn.Width = 127;
+            // 
+            // miejscowoscDataGridViewTextBoxColumn
+            // 
+            this.miejscowoscDataGridViewTextBoxColumn.DataPropertyName = "Miejscowosc";
+            this.miejscowoscDataGridViewTextBoxColumn.HeaderText = "Miejscowosc";
+            this.miejscowoscDataGridViewTextBoxColumn.Name = "miejscowoscDataGridViewTextBoxColumn";
+            this.miejscowoscDataGridViewTextBoxColumn.Width = 198;
+            // 
+            // kodDataGridViewTextBoxColumn
+            // 
+            this.kodDataGridViewTextBoxColumn.DataPropertyName = "Kod";
+            this.kodDataGridViewTextBoxColumn.HeaderText = "Kod";
+            this.kodDataGridViewTextBoxColumn.Name = "kodDataGridViewTextBoxColumn";
+            this.kodDataGridViewTextBoxColumn.Width = 90;
+            // 
+            // grupaDataGridViewTextBoxColumn
+            // 
+            this.grupaDataGridViewTextBoxColumn.DataPropertyName = "Grupa";
+            this.grupaDataGridViewTextBoxColumn.HeaderText = "Grupa";
+            this.grupaDataGridViewTextBoxColumn.Name = "grupaDataGridViewTextBoxColumn";
+            this.grupaDataGridViewTextBoxColumn.Width = 116;
+            // 
+            // dostawcyBindingSource
+            // 
+            this.dostawcyBindingSource.DataSource = typeof(MagazynAplikacja.Dostawcy);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1209, 732);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.panel_Dostawa_Main);
+            this.Controls.Add(this.Btn_Dostawa2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.Btn_Dostawa);
             this.Controls.Add(this.Btn_Magazyn);
@@ -531,6 +747,10 @@
             this.panel_Magazyn.PerformLayout();
             this.panel_Zamowienia.ResumeLayout(false);
             this.panel_Zamowienia.PerformLayout();
+            this.panel_Dostawa_Main.ResumeLayout(false);
+            this.panel_Dostawa_Main.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dostawcyBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -580,8 +800,27 @@
         private System.Windows.Forms.Panel panel_Zamowienia;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button Btn_Dostawa;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Btn_Dostawa2;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel_Dostawa_Main;
+        private System.Windows.Forms.Button Btn_Dostawca_Import;
+        private System.Windows.Forms.Button Btn_Dostawca_Edit;
+        private System.Windows.Forms.Button Btn_Dostawca_New;
+        private System.Windows.Forms.Button Btn_Dostawca_Select;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button Btn_Dostawca_Export;
+        private System.Windows.Forms.BindingSource dostawcyBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kontrahentDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nazwaskroconaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nIPDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn miejscowoscDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kodDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn grupaDataGridViewTextBoxColumn;
     }
 }
 

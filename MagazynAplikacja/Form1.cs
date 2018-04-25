@@ -3,28 +3,36 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using System.Xml.Serialization;
 
 namespace MagazynAplikacja
 {
     public partial class Form1 : Form
     {
         List<Panel> listPanel = new List<Panel>();
+        XmlSerializer xs;
+        List<Dostawcy> listDostawcy;
 
         public Form1()
         {
             InitializeComponent();
+
+            listDostawcy = new List<Dostawcy>();
+            xs = new XmlSerializer(typeof(List<Dostawcy>));
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             
-            listPanel.Add(panel_Magazyn);      
-            listPanel.Add(panel_Zamowienia);    
+            listPanel.Add(panel_Magazyn);           //0
+            listPanel.Add(panel_Zamowienia);        //1
+            listPanel.Add(panel_Dostawa_Main);      //2
             UkryjPanele();
         }
 
@@ -189,6 +197,66 @@ namespace MagazynAplikacja
         private void Btn_Dostawa_Click(object sender, EventArgs e)
         {
             UkryjPanele();
+        }
+
+        private void Btn_Dostawa2_Click(object sender, EventArgs e)
+        {
+            UkryjPanele();
+            listPanel[2].BringToFront();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            UkryjPanele();
+        }
+
+
+        
+        private void Btn_Dostawca_Import_Click(object sender, EventArgs e)
+        {
+            FileStream fs = new FileStream("..\\..\\Pliki XML\\ListaDostawcow.xml", FileMode.Open, FileAccess.Read);
+            listDostawcy = (List<Dostawcy>)xs.Deserialize(fs);
+
+            dataGridView2.DataSource = listDostawcy;
+            fs.Close();
+        }
+
+        private void Btn_Dostawca_Export_Click(object sender, EventArgs e)
+        {
+            DataSet ds = new DataSet();
+            DataTable dt = new DataTable();
+            dt.TableName = "Dostawcy";
+            dt.Columns.Add("id");
+            dt.Columns.Add("Kontrahent");
+            dt.Columns.Add("Nazwa_skrocona");
+            dt.Columns.Add("NIP");
+            dt.Columns.Add("Adress");
+            dt.Columns.Add("Miejscowosc");
+            dt.Columns.Add("Kod");
+            dt.Columns.Add("Grupa");
+            ds.Tables.Add(dt);
+
+            foreach (DataGridViewRow r in dataGridView2.Rows)
+            {
+                DataRow row = ds.Tables["Dostawcy"].NewRow();
+                row["id"] = r.Cells[0].Value;
+                row["Kontrahent"] = r.Cells[1].Value;
+                row["Nazwa_skrocona"] = r.Cells[2].Value;
+                row["NIP"] = r.Cells[3].Value;
+                row["Adress"] = r.Cells[4].Value;
+                row["Miejscowosc"] = r.Cells[5].Value;
+                row["Kod"] = r.Cells[6].Value;
+                row["Grupa"] = r.Cells[7].Value;
+                ds.Tables["Dostawcy"].Rows.Add(row);
+            }
+            ds.WriteXml("..\\..\\Pliki XML\\ListaDostawcow.xml");
+
+          
+        } 
+
+        private void Btn_Dostawca_New_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

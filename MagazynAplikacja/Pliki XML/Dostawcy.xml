@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Faktura>
+  <Dostawca>
+    <Nazwa>Farutex sp. z o.o.</Nazwa>
+    <NIP>1234561212</NIP>
+    <Adres>Jakastam 54</Adres>
+    <Kod>80-800</Kod>
+    <Miasto>Gdańsk</Miasto>
+  </Dostawca>
+
+  <Dostawca>
+    <Nazwa>Firma Krzak sp. z o.o.</Nazwa>
+    <NIP>7897897878</NIP>
+    <Adres>Parkowa 54</Adres>
+    <Kod>80-800</Kod>
+    <Miasto>Gdańsk</Miasto>
+  </Dostawca>
+</Faktura>
