@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" standalone="yes"?>
-<NewDataSet>
+<?xml version="1.0" standalone="yes"?>
+<ArrayOfDostawcy>
   <Dostawcy>
-    <id>10</id>
+    <id>1</id>
     <Kontrahent>Maka sp. z o.o.</Kontrahent>
     <Nazwa_skrocona>Maka</Nazwa_skrocona>
     <NIP>1001001010</NIP>
@@ -11,7 +11,7 @@
     <Grupa>1</Grupa>
   </Dostawcy>
   <Dostawcy>
-    <id>20</id>
+    <id>2</id>
     <Kontrahent>22</Kontrahent>
     <Nazwa_skrocona>22</Nazwa_skrocona>
     <NIP>5840007372</NIP>
@@ -20,4 +20,4 @@
     <Kod>22-400</Kod>
     <Grupa>2</Grupa>
   </Dostawcy>
-</NewDataSet>
+</ArrayOfDostawcy>

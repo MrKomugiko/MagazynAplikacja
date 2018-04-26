@@ -62,7 +62,7 @@ namespace MagazynAplikacja
             dataGridView1.Rows[n].Cells[0].Value = textBox_Nazwa.Text;
             dataGridView1.Rows[n].Cells[1].Value = textBox_Netto.Text;
             dataGridView1.Rows[n].Cells[2].Value = textBox_VAT.Text;
-            dataGridView1.Rows[n].Cells[3].Value = (Convert.ToDouble(textBox_Netto.Text) * (Convert.ToDouble(textBox_VAT.Text) / 100) + 1);
+            dataGridView1.Rows[n].Cells[3].Value = ((Convert.ToDouble(textBox_Netto.Text) * ( (Convert.ToDouble(textBox_VAT.Text) / 100) + 1)));
             dataGridView1.Rows[n].Cells[4].Value = textBox_ilosc.Text;
             dataGridView1.Rows[n].Cells[5].Value = (Convert.ToDouble(textBox_ilosc.Text) * Convert.ToDouble(textBox_Netto.Text) * ((Convert.ToDouble(textBox_VAT.Text)/100) + 1));
 
@@ -114,7 +114,7 @@ namespace MagazynAplikacja
                 row1["Wartosc_calkowita_brutto"] = r.Cells[5].Value;
                 ds.Tables["Produkt"].Rows.Add(row1);
             }
-            ds.WriteXml("C:\\Users\\Kuba\\Data.xml");
+            ds.WriteXml("C:\\Users\\MrKom\\Data.xml");
             
             
         }
@@ -122,7 +122,7 @@ namespace MagazynAplikacja
         private void button_Zaladuj_Click(object sender, EventArgs e)
         {
             DataSet ds = new DataSet();
-            ds.ReadXml("C:\\Users\\Kuba\\Data.xml");
+            ds.ReadXml("C:\\Users\\MrKom\\Data.xml");
             textBox2_Nazwa.Text = ds.Tables["Dostawca"].Rows[0][0].ToString();
             textBox2_NIP.Text = ds.Tables["Dostawca"].Rows[0][1].ToString();
             textBox2_Adres.Text = ds.Tables["Dostawca"].Rows[0][2].ToString();
@@ -214,7 +214,7 @@ namespace MagazynAplikacja
         
         private void Btn_Dostawca_Import_Click(object sender, EventArgs e)
         {
-            FileStream fs = new FileStream("..\\..\\Pliki XML\\ListaDostawcow.xml", FileMode.Open, FileAccess.Read);
+            FileStream fs = new FileStream("..\\..\\Pliki XML\\ListaDostawcowIMPORT.xml", FileMode.Open, FileAccess.Read);
             listDostawcy = (List<Dostawcy>)xs.Deserialize(fs);
 
             dataGridView2.DataSource = listDostawcy;
@@ -249,7 +249,7 @@ namespace MagazynAplikacja
                 row["Grupa"] = r.Cells[7].Value;
                 ds.Tables["Dostawcy"].Rows.Add(row);
             }
-            ds.WriteXml("..\\..\\Pliki XML\\ListaDostawcow.xml");
+            ds.WriteXml("..\\..\\Pliki XML\\ListaDostawcowEXPORT.xml");
 
           
         } 

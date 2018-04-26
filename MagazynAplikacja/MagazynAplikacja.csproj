@@ -109,7 +109,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Pliki XML\Dostawcy.xml" />
-    <Content Include="Pliki XML\ListaDostawcow.xml" />
+    <Content Include="Pliki XML\ListaDostawcowIMPORT.xml" />
+    <Content Include="Pliki XML\ListaDostawcowEXPORT.xml" />
     <Content Include="Pliki XML\Produkty.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
