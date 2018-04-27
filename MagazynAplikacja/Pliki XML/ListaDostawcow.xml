@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ArrayOfDostawcy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Dostawcy>
+    <id>0</id>
+    <Kontrahent>0</Kontrahent>
+    <Nazwa_skrocona>0</Nazwa_skrocona>
+    <NIP>0</NIP>
+    <Adress>0</Adress>
+    <Miejscowosc>0</Miejscowosc>
+    <Kod>0</Kod>
+    <Grupa>0</Grupa>
+  </Dostawcy>
+</ArrayOfDostawcy>

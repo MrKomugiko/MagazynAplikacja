@@ -214,7 +214,7 @@ namespace MagazynAplikacja
         
         private void Btn_Dostawca_Import_Click(object sender, EventArgs e)
         {
-            FileStream fs = new FileStream("..\\..\\Pliki XML\\ListaDostawcowIMPORT.xml", FileMode.Open, FileAccess.Read);
+            FileStream fs = new FileStream("..\\..\\Pliki XML\\ListaDostawcow.xml", FileMode.Open, FileAccess.Read);
             listDostawcy = (List<Dostawcy>)xs.Deserialize(fs);
 
             dataGridView2.DataSource = listDostawcy;
@@ -223,40 +223,15 @@ namespace MagazynAplikacja
 
         private void Btn_Dostawca_Export_Click(object sender, EventArgs e)
         {
-            DataSet ds = new DataSet();
-            DataTable dt = new DataTable();
-            dt.TableName = "Dostawcy";
-            dt.Columns.Add("id");
-            dt.Columns.Add("Kontrahent");
-            dt.Columns.Add("Nazwa_skrocona");
-            dt.Columns.Add("NIP");
-            dt.Columns.Add("Adress");
-            dt.Columns.Add("Miejscowosc");
-            dt.Columns.Add("Kod");
-            dt.Columns.Add("Grupa");
-            ds.Tables.Add(dt);
-
-            foreach (DataGridViewRow r in dataGridView2.Rows)
-            {
-                DataRow row = ds.Tables["Dostawcy"].NewRow();
-                row["id"] = r.Cells[0].Value;
-                row["Kontrahent"] = r.Cells[1].Value;
-                row["Nazwa_skrocona"] = r.Cells[2].Value;
-                row["NIP"] = r.Cells[3].Value;
-                row["Adress"] = r.Cells[4].Value;
-                row["Miejscowosc"] = r.Cells[5].Value;
-                row["Kod"] = r.Cells[6].Value;
-                row["Grupa"] = r.Cells[7].Value;
-                ds.Tables["Dostawcy"].Rows.Add(row);
-            }
-            ds.WriteXml("..\\..\\Pliki XML\\ListaDostawcowEXPORT.xml");
-
-          
+            FileStream fs = new FileStream("..\\..\\Pliki XML\\ListaDostawcowEXPORT.xml", FileMode.Create, FileAccess.Write);
+            xs.Serialize(fs, listDostawcy);                              
+            fs.Close();                                                
         } 
 
         private void Btn_Dostawca_New_Click(object sender, EventArgs e)
         {
-
+            Form_Nowy_Dostawca Nowy_Dostawca = new Form_Nowy_Dostawca();
+            Nowy_Dostawca.ShowDialog();
         }
     }
 }

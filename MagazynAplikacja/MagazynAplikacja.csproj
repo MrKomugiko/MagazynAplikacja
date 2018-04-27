@@ -67,10 +67,22 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Nowy_Dostawca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Nowy_Dostawca.Designer.cs">
+      <DependentUpon>Form_Nowy_Dostawca.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Nowy_Dostawca.pl.resx">
+      <DependentUpon>Form_Nowy_Dostawca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Nowy_Dostawca.resx">
+      <DependentUpon>Form_Nowy_Dostawca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -109,7 +121,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Pliki XML\Dostawcy.xml" />
-    <Content Include="Pliki XML\ListaDostawcowIMPORT.xml" />
+    <Content Include="Pliki XML\ListaDostawcow.xml" />
     <Content Include="Pliki XML\ListaDostawcowEXPORT.xml" />
     <Content Include="Pliki XML\Produkty.xml" />
   </ItemGroup>

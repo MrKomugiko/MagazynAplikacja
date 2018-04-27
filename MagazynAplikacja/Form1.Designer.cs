@@ -697,7 +697,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1209, 732);
-            this.Controls.Add(this.panel_Zamowienia);
+            this.Controls.Add(this.panel_Dostawa_Main);
             this.Controls.Add(this.textBox_VAT);
             this.Controls.Add(this.Btn_Dostawa2);
             this.Controls.Add(this.textBox2_Nazwa);
@@ -730,8 +730,8 @@
             this.Controls.Add(this.Btn_Dostawa);
             this.Controls.Add(this.textBox_ilosc);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.panel_Zamowienia);
             this.Controls.Add(this.panel_Magazyn);
-            this.Controls.Add(this.panel_Dostawa_Main);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
