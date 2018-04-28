@@ -73,6 +73,7 @@
     <Compile Include="Form_Nowy_Dostawca.Designer.cs">
       <DependentUpon>Form_Nowy_Dostawca.cs</DependentUpon>
     </Compile>
+    <Compile Include="Produkty.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

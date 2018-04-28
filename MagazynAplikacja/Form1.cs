@@ -233,5 +233,10 @@ namespace MagazynAplikacja
             Form_Nowy_Dostawca Nowy_Dostawca = new Form_Nowy_Dostawca();
             Nowy_Dostawca.ShowDialog();
         }
+
+        private void Btn_Dostawca_Select_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -27,6 +27,7 @@ namespace MagazynAplikacja
 
 
         }
+
         private void Form_Nowy_Dostawca_Load(object sender, EventArgs e)
         {
             

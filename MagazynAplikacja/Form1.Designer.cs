@@ -69,7 +69,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.panel_Dostawa_Main = new System.Windows.Forms.Panel();
             this.Btn_Dostawca_Export = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.Btn_Dostawca_Import = new System.Windows.Forms.Button();
             this.Btn_Dostawca_Edit = new System.Windows.Forms.Button();
@@ -81,6 +80,7 @@
             this.textBox_VAT = new System.Windows.Forms.TextBox();
             this.textBox2_Nazwa = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.panel_Dostawa = new System.Windows.Forms.Panel();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kontrahentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazwaskroconaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -95,6 +95,7 @@
             this.panel_Zamowienia.SuspendLayout();
             this.panel_Dostawa_Main.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.panel_Dostawa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dostawcyBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -116,7 +117,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(900, 18);
+            this.label1.Location = new System.Drawing.Point(721, 6);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 29);
             this.label1.TabIndex = 3;
@@ -126,7 +127,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(855, 89);
+            this.label2.Location = new System.Drawing.Point(676, 77);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 17);
@@ -136,7 +137,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(855, 127);
+            this.label3.Location = new System.Drawing.Point(676, 115);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 17);
@@ -146,7 +147,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(855, 167);
+            this.label4.Location = new System.Drawing.Point(676, 155);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 17);
@@ -155,7 +156,7 @@
             // 
             // textBox_Nazwa
             // 
-            this.textBox_Nazwa.Location = new System.Drawing.Point(959, 80);
+            this.textBox_Nazwa.Location = new System.Drawing.Point(780, 68);
             this.textBox_Nazwa.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_Nazwa.Name = "textBox_Nazwa";
             this.textBox_Nazwa.Size = new System.Drawing.Size(179, 22);
@@ -163,7 +164,7 @@
             // 
             // textBox_Netto
             // 
-            this.textBox_Netto.Location = new System.Drawing.Point(959, 118);
+            this.textBox_Netto.Location = new System.Drawing.Point(780, 106);
             this.textBox_Netto.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_Netto.Name = "textBox_Netto";
             this.textBox_Netto.Size = new System.Drawing.Size(179, 22);
@@ -171,7 +172,7 @@
             // 
             // button_Dodaj
             // 
-            this.button_Dodaj.Location = new System.Drawing.Point(615, 273);
+            this.button_Dodaj.Location = new System.Drawing.Point(436, 261);
             this.button_Dodaj.Margin = new System.Windows.Forms.Padding(4);
             this.button_Dodaj.Name = "button_Dodaj";
             this.button_Dodaj.Size = new System.Drawing.Size(147, 50);
@@ -182,7 +183,7 @@
             // 
             // button_Edytuj
             // 
-            this.button_Edytuj.Location = new System.Drawing.Point(785, 273);
+            this.button_Edytuj.Location = new System.Drawing.Point(606, 261);
             this.button_Edytuj.Margin = new System.Windows.Forms.Padding(4);
             this.button_Edytuj.Name = "button_Edytuj";
             this.button_Edytuj.Size = new System.Drawing.Size(147, 50);
@@ -193,7 +194,7 @@
             // 
             // button_Usun
             // 
-            this.button_Usun.Location = new System.Drawing.Point(959, 273);
+            this.button_Usun.Location = new System.Drawing.Point(780, 261);
             this.button_Usun.Margin = new System.Windows.Forms.Padding(4);
             this.button_Usun.Name = "button_Usun";
             this.button_Usun.Size = new System.Drawing.Size(147, 50);
@@ -213,7 +214,7 @@
             this.BRUTTO,
             this.Ilosc,
             this.Wartosc_calk_brutto});
-            this.dataGridView1.Location = new System.Drawing.Point(180, 378);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 366);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -258,7 +259,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label7.Location = new System.Drawing.Point(616, 18);
+            this.label7.Location = new System.Drawing.Point(437, 6);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(132, 29);
             this.label7.TabIndex = 18;
@@ -266,7 +267,7 @@
             // 
             // textBox2_Miasto
             // 
-            this.textBox2_Miasto.Location = new System.Drawing.Point(668, 235);
+            this.textBox2_Miasto.Location = new System.Drawing.Point(489, 223);
             this.textBox2_Miasto.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2_Miasto.Name = "textBox2_Miasto";
             this.textBox2_Miasto.Size = new System.Drawing.Size(179, 22);
@@ -274,7 +275,7 @@
             // 
             // textBox2_Kod
             // 
-            this.textBox2_Kod.Location = new System.Drawing.Point(668, 197);
+            this.textBox2_Kod.Location = new System.Drawing.Point(489, 185);
             this.textBox2_Kod.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2_Kod.Name = "textBox2_Kod";
             this.textBox2_Kod.Size = new System.Drawing.Size(179, 22);
@@ -282,7 +283,7 @@
             // 
             // textBox2_Adres
             // 
-            this.textBox2_Adres.Location = new System.Drawing.Point(668, 159);
+            this.textBox2_Adres.Location = new System.Drawing.Point(489, 147);
             this.textBox2_Adres.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2_Adres.Name = "textBox2_Adres";
             this.textBox2_Adres.Size = new System.Drawing.Size(179, 22);
@@ -290,7 +291,7 @@
             // 
             // textBox2_NIP
             // 
-            this.textBox2_NIP.Location = new System.Drawing.Point(668, 118);
+            this.textBox2_NIP.Location = new System.Drawing.Point(489, 106);
             this.textBox2_NIP.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2_NIP.Name = "textBox2_NIP";
             this.textBox2_NIP.Size = new System.Drawing.Size(179, 22);
@@ -299,7 +300,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(567, 244);
+            this.label8.Location = new System.Drawing.Point(388, 232);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(49, 17);
@@ -309,7 +310,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(564, 206);
+            this.label9.Location = new System.Drawing.Point(385, 194);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(95, 17);
@@ -319,7 +320,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(564, 167);
+            this.label10.Location = new System.Drawing.Point(385, 155);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(45, 17);
@@ -329,7 +330,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(564, 127);
+            this.label11.Location = new System.Drawing.Point(385, 115);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(30, 17);
@@ -339,7 +340,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(564, 89);
+            this.label12.Location = new System.Drawing.Point(385, 77);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(50, 17);
@@ -348,7 +349,7 @@
             // 
             // button_ZapiszXML
             // 
-            this.button_ZapiszXML.Location = new System.Drawing.Point(568, 331);
+            this.button_ZapiszXML.Location = new System.Drawing.Point(389, 319);
             this.button_ZapiszXML.Margin = new System.Windows.Forms.Padding(4);
             this.button_ZapiszXML.Name = "button_ZapiszXML";
             this.button_ZapiszXML.Size = new System.Drawing.Size(280, 39);
@@ -359,7 +360,7 @@
             // 
             // button_Zaladuj
             // 
-            this.button_Zaladuj.Location = new System.Drawing.Point(859, 331);
+            this.button_Zaladuj.Location = new System.Drawing.Point(680, 319);
             this.button_Zaladuj.Margin = new System.Windows.Forms.Padding(4);
             this.button_Zaladuj.Name = "button_Zaladuj";
             this.button_Zaladuj.Size = new System.Drawing.Size(280, 39);
@@ -370,6 +371,7 @@
             // 
             // Btn_Zamowienia
             // 
+            this.Btn_Zamowienia.Enabled = false;
             this.Btn_Zamowienia.Location = new System.Drawing.Point(12, 218);
             this.Btn_Zamowienia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Zamowienia.Name = "Btn_Zamowienia";
@@ -381,6 +383,7 @@
             // 
             // Btn_Magazyn
             // 
+            this.Btn_Magazyn.Enabled = false;
             this.Btn_Magazyn.Location = new System.Drawing.Point(12, 164);
             this.Btn_Magazyn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Magazyn.Name = "Btn_Magazyn";
@@ -410,6 +413,7 @@
             // 
             // panel_Zamowienia
             // 
+            this.panel_Zamowienia.BackColor = System.Drawing.SystemColors.Control;
             this.panel_Zamowienia.Controls.Add(this.label13);
             this.panel_Zamowienia.Location = new System.Drawing.Point(177, 9);
             this.panel_Zamowienia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -444,12 +448,13 @@
             this.Btn_Dostawa2.Name = "Btn_Dostawa2";
             this.Btn_Dostawa2.Size = new System.Drawing.Size(147, 50);
             this.Btn_Dostawa2.TabIndex = 39;
-            this.Btn_Dostawa2.Text = "Dostawa NEW";
+            this.Btn_Dostawa2.Text = "Dostawcy";
             this.Btn_Dostawa2.UseVisualStyleBackColor = true;
             this.Btn_Dostawa2.Click += new System.EventHandler(this.Btn_Dostawa2_Click);
             // 
             // button2
             // 
+            this.button2.Enabled = false;
             this.button2.Location = new System.Drawing.Point(12, 62);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
@@ -460,9 +465,8 @@
             // 
             // panel_Dostawa_Main
             // 
-            this.panel_Dostawa_Main.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel_Dostawa_Main.BackColor = System.Drawing.SystemColors.Control;
             this.panel_Dostawa_Main.Controls.Add(this.Btn_Dostawca_Export);
-            this.panel_Dostawa_Main.Controls.Add(this.button8);
             this.panel_Dostawa_Main.Controls.Add(this.button7);
             this.panel_Dostawa_Main.Controls.Add(this.Btn_Dostawca_Import);
             this.panel_Dostawa_Main.Controls.Add(this.Btn_Dostawca_Edit);
@@ -490,23 +494,11 @@
             this.Btn_Dostawca_Export.UseVisualStyleBackColor = false;
             this.Btn_Dostawca_Export.Click += new System.EventHandler(this.Btn_Dostawca_Export_Click);
             // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button8.Location = new System.Drawing.Point(859, 642);
-            this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(147, 50);
-            this.button8.TabIndex = 45;
-            this.button8.Text = "NEXT";
-            this.button8.UseVisualStyleBackColor = false;
-            // 
             // button7
             // 
             this.button7.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button7.Location = new System.Drawing.Point(13, 642);
+            this.button7.Location = new System.Drawing.Point(859, 645);
             this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(147, 50);
@@ -531,6 +523,7 @@
             // Btn_Dostawca_Edit
             // 
             this.Btn_Dostawca_Edit.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Btn_Dostawca_Edit.Enabled = false;
             this.Btn_Dostawca_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Btn_Dostawca_Edit.Location = new System.Drawing.Point(439, 17);
             this.Btn_Dostawca_Edit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -556,6 +549,7 @@
             // Btn_Dostawca_Select
             // 
             this.Btn_Dostawca_Select.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Btn_Dostawca_Select.Enabled = false;
             this.Btn_Dostawca_Select.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Btn_Dostawca_Select.Location = new System.Drawing.Point(256, 17);
             this.Btn_Dostawca_Select.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -564,6 +558,7 @@
             this.Btn_Dostawca_Select.TabIndex = 41;
             this.Btn_Dostawca_Select.Text = "SELECT";
             this.Btn_Dostawca_Select.UseVisualStyleBackColor = false;
+            this.Btn_Dostawca_Select.Click += new System.EventHandler(this.Btn_Dostawca_Select_Click);
             // 
             // label14
             // 
@@ -575,9 +570,11 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AllowUserToOrderColumns = true;
             this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -589,18 +586,19 @@
             this.kodDataGridViewTextBoxColumn,
             this.grupaDataGridViewTextBoxColumn});
             this.dataGridView2.DataSource = this.dostawcyBindingSource;
+            this.dataGridView2.EnableHeadersVisualStyles = false;
             this.dataGridView2.Location = new System.Drawing.Point(13, 78);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.RowHeadersWidth = 37;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(993, 560);
             this.dataGridView2.TabIndex = 46;
             // 
             // textBox_ilosc
             // 
-            this.textBox_ilosc.Location = new System.Drawing.Point(959, 195);
+            this.textBox_ilosc.Location = new System.Drawing.Point(780, 183);
             this.textBox_ilosc.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_ilosc.Name = "textBox_ilosc";
             this.textBox_ilosc.Size = new System.Drawing.Size(179, 22);
@@ -608,7 +606,7 @@
             // 
             // textBox_VAT
             // 
-            this.textBox_VAT.Location = new System.Drawing.Point(959, 159);
+            this.textBox_VAT.Location = new System.Drawing.Point(780, 147);
             this.textBox_VAT.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_VAT.Name = "textBox_VAT";
             this.textBox_VAT.Size = new System.Drawing.Size(179, 22);
@@ -616,7 +614,7 @@
             // 
             // textBox2_Nazwa
             // 
-            this.textBox2_Nazwa.Location = new System.Drawing.Point(669, 80);
+            this.textBox2_Nazwa.Location = new System.Drawing.Point(490, 68);
             this.textBox2_Nazwa.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2_Nazwa.Name = "textBox2_Nazwa";
             this.textBox2_Nazwa.Size = new System.Drawing.Size(179, 22);
@@ -625,68 +623,94 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(855, 200);
+            this.label5.Location = new System.Drawing.Point(676, 188);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(36, 17);
             this.label5.TabIndex = 43;
             this.label5.Text = "Ilosc";
             // 
+            // panel_Dostawa
+            // 
+            this.panel_Dostawa.BackColor = System.Drawing.SystemColors.Control;
+            this.panel_Dostawa.Controls.Add(this.textBox_VAT);
+            this.panel_Dostawa.Controls.Add(this.label7);
+            this.panel_Dostawa.Controls.Add(this.label5);
+            this.panel_Dostawa.Controls.Add(this.textBox2_Nazwa);
+            this.panel_Dostawa.Controls.Add(this.textBox_ilosc);
+            this.panel_Dostawa.Controls.Add(this.label1);
+            this.panel_Dostawa.Controls.Add(this.label2);
+            this.panel_Dostawa.Controls.Add(this.label3);
+            this.panel_Dostawa.Controls.Add(this.button_Zaladuj);
+            this.panel_Dostawa.Controls.Add(this.label4);
+            this.panel_Dostawa.Controls.Add(this.button_ZapiszXML);
+            this.panel_Dostawa.Controls.Add(this.textBox_Nazwa);
+            this.panel_Dostawa.Controls.Add(this.textBox2_Miasto);
+            this.panel_Dostawa.Controls.Add(this.textBox_Netto);
+            this.panel_Dostawa.Controls.Add(this.textBox2_Kod);
+            this.panel_Dostawa.Controls.Add(this.button_Dodaj);
+            this.panel_Dostawa.Controls.Add(this.textBox2_Adres);
+            this.panel_Dostawa.Controls.Add(this.button_Edytuj);
+            this.panel_Dostawa.Controls.Add(this.textBox2_NIP);
+            this.panel_Dostawa.Controls.Add(this.button_Usun);
+            this.panel_Dostawa.Controls.Add(this.label8);
+            this.panel_Dostawa.Controls.Add(this.dataGridView1);
+            this.panel_Dostawa.Controls.Add(this.label9);
+            this.panel_Dostawa.Controls.Add(this.label12);
+            this.panel_Dostawa.Controls.Add(this.label10);
+            this.panel_Dostawa.Controls.Add(this.label11);
+            this.panel_Dostawa.Location = new System.Drawing.Point(177, 9);
+            this.panel_Dostawa.Name = "panel_Dostawa";
+            this.panel_Dostawa.Size = new System.Drawing.Size(1020, 706);
+            this.panel_Dostawa.TabIndex = 44;
+            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
             this.idDataGridViewTextBoxColumn.HeaderText = "id";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.Width = 64;
             // 
             // kontrahentDataGridViewTextBoxColumn
             // 
             this.kontrahentDataGridViewTextBoxColumn.DataPropertyName = "Kontrahent";
             this.kontrahentDataGridViewTextBoxColumn.HeaderText = "Kontrahent";
             this.kontrahentDataGridViewTextBoxColumn.Name = "kontrahentDataGridViewTextBoxColumn";
-            this.kontrahentDataGridViewTextBoxColumn.Width = 175;
             // 
             // nazwaskroconaDataGridViewTextBoxColumn
             // 
             this.nazwaskroconaDataGridViewTextBoxColumn.DataPropertyName = "Nazwa_skrocona";
             this.nazwaskroconaDataGridViewTextBoxColumn.HeaderText = "Nazwa_skrocona";
             this.nazwaskroconaDataGridViewTextBoxColumn.Name = "nazwaskroconaDataGridViewTextBoxColumn";
-            this.nazwaskroconaDataGridViewTextBoxColumn.Width = 250;
             // 
             // nIPDataGridViewTextBoxColumn
             // 
             this.nIPDataGridViewTextBoxColumn.DataPropertyName = "NIP";
             this.nIPDataGridViewTextBoxColumn.HeaderText = "NIP";
             this.nIPDataGridViewTextBoxColumn.Name = "nIPDataGridViewTextBoxColumn";
-            this.nIPDataGridViewTextBoxColumn.Width = 86;
             // 
             // adressDataGridViewTextBoxColumn
             // 
             this.adressDataGridViewTextBoxColumn.DataPropertyName = "Adress";
             this.adressDataGridViewTextBoxColumn.HeaderText = "Adress";
             this.adressDataGridViewTextBoxColumn.Name = "adressDataGridViewTextBoxColumn";
-            this.adressDataGridViewTextBoxColumn.Width = 127;
             // 
             // miejscowoscDataGridViewTextBoxColumn
             // 
             this.miejscowoscDataGridViewTextBoxColumn.DataPropertyName = "Miejscowosc";
             this.miejscowoscDataGridViewTextBoxColumn.HeaderText = "Miejscowosc";
             this.miejscowoscDataGridViewTextBoxColumn.Name = "miejscowoscDataGridViewTextBoxColumn";
-            this.miejscowoscDataGridViewTextBoxColumn.Width = 198;
             // 
             // kodDataGridViewTextBoxColumn
             // 
             this.kodDataGridViewTextBoxColumn.DataPropertyName = "Kod";
             this.kodDataGridViewTextBoxColumn.HeaderText = "Kod";
             this.kodDataGridViewTextBoxColumn.Name = "kodDataGridViewTextBoxColumn";
-            this.kodDataGridViewTextBoxColumn.Width = 90;
             // 
             // grupaDataGridViewTextBoxColumn
             // 
             this.grupaDataGridViewTextBoxColumn.DataPropertyName = "Grupa";
             this.grupaDataGridViewTextBoxColumn.HeaderText = "Grupa";
             this.grupaDataGridViewTextBoxColumn.Name = "grupaDataGridViewTextBoxColumn";
-            this.grupaDataGridViewTextBoxColumn.Width = 116;
             // 
             // dostawcyBindingSource
             // 
@@ -697,39 +721,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1209, 732);
-            this.Controls.Add(this.panel_Dostawa_Main);
-            this.Controls.Add(this.textBox_VAT);
             this.Controls.Add(this.Btn_Dostawa2);
-            this.Controls.Add(this.textBox2_Nazwa);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.Btn_Magazyn);
             this.Controls.Add(this.Btn_Zamowienia);
-            this.Controls.Add(this.button_Zaladuj);
-            this.Controls.Add(this.button_ZapiszXML);
-            this.Controls.Add(this.textBox2_Miasto);
-            this.Controls.Add(this.textBox2_Kod);
-            this.Controls.Add(this.textBox2_Adres);
-            this.Controls.Add(this.textBox2_NIP);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button_Usun);
-            this.Controls.Add(this.button_Edytuj);
-            this.Controls.Add(this.button_Dodaj);
-            this.Controls.Add(this.textBox_Netto);
-            this.Controls.Add(this.textBox_Nazwa);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.Btn_loadXML);
             this.Controls.Add(this.Btn_Dostawa);
-            this.Controls.Add(this.textBox_ilosc);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.panel_Dostawa_Main);
+            this.Controls.Add(this.panel_Dostawa);
             this.Controls.Add(this.panel_Zamowienia);
             this.Controls.Add(this.panel_Magazyn);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -744,9 +743,10 @@
             this.panel_Dostawa_Main.ResumeLayout(false);
             this.panel_Dostawa_Main.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.panel_Dostawa.ResumeLayout(false);
+            this.panel_Dostawa.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dostawcyBindingSource)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -790,7 +790,6 @@
         private System.Windows.Forms.Button Btn_Dostawca_New;
         private System.Windows.Forms.Button Btn_Dostawca_Select;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button Btn_Dostawca_Export;
@@ -813,6 +812,7 @@
         private System.Windows.Forms.TextBox textBox_VAT;
         private System.Windows.Forms.TextBox textBox2_Nazwa;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel_Dostawa;
     }
 }
 

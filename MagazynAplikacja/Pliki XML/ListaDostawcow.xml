@@ -10,4 +10,24 @@
     <Kod>0</Kod>
     <Grupa>0</Grupa>
   </Dostawcy>
+  <Dostawcy>
+    <id>1000</id>
+    <Kontrahent>Krzak Sp.z o.o.</Kontrahent>
+    <Nazwa_skrocona>Krzak</Nazwa_skrocona>
+    <NIP>1001001010</NIP>
+    <Adress>las</Adress>
+    <Miejscowosc>gdańsk</Miejscowosc>
+    <Kod>80-20</Kod>
+    <Grupa>0</Grupa>
+  </Dostawcy>
+  <Dostawcy>
+    <id>1001</id>
+    <Kontrahent>fbfbf</Kontrahent>
+    <Nazwa_skrocona>bfdbd</Nazwa_skrocona>
+    <NIP>54335</NIP>
+    <Adress>gfeg</Adress>
+    <Miejscowosc>ggeg</Miejscowosc>
+    <Kod>4335</Kod>
+    <Grupa>0</Grupa>
+  </Dostawcy>
 </ArrayOfDostawcy>

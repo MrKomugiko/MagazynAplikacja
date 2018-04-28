@@ -11,23 +11,13 @@
     <Grupa>0</Grupa>
   </Dostawcy>
   <Dostawcy>
-    <id>1002</id>
-    <Kontrahent>maka</Kontrahent>
-    <Nazwa_skrocona>maka</Nazwa_skrocona>
-    <NIP>1234567878</NIP>
-    <Adress>bieganskiego</Adress>
-    <Miejscowosc>Gdansk</Miejscowosc>
-    <Kod>80800</Kod>
-    <Grupa>0</Grupa>
-  </Dostawcy>
-  <Dostawcy>
-    <id>1003</id>
-    <Kontrahent>maka2</Kontrahent>
-    <Nazwa_skrocona>maka2</Nazwa_skrocona>
-    <NIP>2222222222</NIP>
-    <Adress>222</Adress>
-    <Miejscowosc>222</Miejscowosc>
-    <Kod>22222</Kod>
+    <id>1000</id>
+    <Kontrahent>Krzak Sp.z o.o.</Kontrahent>
+    <Nazwa_skrocona>Krzak</Nazwa_skrocona>
+    <NIP>1001001010</NIP>
+    <Adress>las</Adress>
+    <Miejscowosc>gdańsk</Miejscowosc>
+    <Kod>80-20</Kod>
     <Grupa>0</Grupa>
   </Dostawcy>
 </ArrayOfDostawcy>
