@@ -76,11 +76,6 @@
             this.Btn_Dostawca_Select = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.textBox_ilosc = new System.Windows.Forms.TextBox();
-            this.textBox_VAT = new System.Windows.Forms.TextBox();
-            this.textBox2_Nazwa = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel_Dostawa = new System.Windows.Forms.Panel();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kontrahentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazwaskroconaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -90,13 +85,18 @@
             this.kodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grupaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dostawcyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.textBox_ilosc = new System.Windows.Forms.TextBox();
+            this.textBox_VAT = new System.Windows.Forms.TextBox();
+            this.textBox2_Nazwa = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel_Dostawa = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel_Magazyn.SuspendLayout();
             this.panel_Zamowienia.SuspendLayout();
             this.panel_Dostawa_Main.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.panel_Dostawa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dostawcyBindingSource)).BeginInit();
+            this.panel_Dostawa.SuspendLayout();
             this.SuspendLayout();
             // 
             // Btn_loadXML
@@ -596,6 +596,58 @@
             this.dataGridView2.Size = new System.Drawing.Size(993, 560);
             this.dataGridView2.TabIndex = 46;
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // kontrahentDataGridViewTextBoxColumn
+            // 
+            this.kontrahentDataGridViewTextBoxColumn.DataPropertyName = "Kontrahent";
+            this.kontrahentDataGridViewTextBoxColumn.HeaderText = "Kontrahent";
+            this.kontrahentDataGridViewTextBoxColumn.Name = "kontrahentDataGridViewTextBoxColumn";
+            // 
+            // nazwaskroconaDataGridViewTextBoxColumn
+            // 
+            this.nazwaskroconaDataGridViewTextBoxColumn.DataPropertyName = "Nazwa_skrocona";
+            this.nazwaskroconaDataGridViewTextBoxColumn.HeaderText = "Nazwa_skrocona";
+            this.nazwaskroconaDataGridViewTextBoxColumn.Name = "nazwaskroconaDataGridViewTextBoxColumn";
+            // 
+            // nIPDataGridViewTextBoxColumn
+            // 
+            this.nIPDataGridViewTextBoxColumn.DataPropertyName = "NIP";
+            this.nIPDataGridViewTextBoxColumn.HeaderText = "NIP";
+            this.nIPDataGridViewTextBoxColumn.Name = "nIPDataGridViewTextBoxColumn";
+            // 
+            // adressDataGridViewTextBoxColumn
+            // 
+            this.adressDataGridViewTextBoxColumn.DataPropertyName = "Adress";
+            this.adressDataGridViewTextBoxColumn.HeaderText = "Adress";
+            this.adressDataGridViewTextBoxColumn.Name = "adressDataGridViewTextBoxColumn";
+            // 
+            // miejscowoscDataGridViewTextBoxColumn
+            // 
+            this.miejscowoscDataGridViewTextBoxColumn.DataPropertyName = "Miejscowosc";
+            this.miejscowoscDataGridViewTextBoxColumn.HeaderText = "Miejscowosc";
+            this.miejscowoscDataGridViewTextBoxColumn.Name = "miejscowoscDataGridViewTextBoxColumn";
+            // 
+            // kodDataGridViewTextBoxColumn
+            // 
+            this.kodDataGridViewTextBoxColumn.DataPropertyName = "Kod";
+            this.kodDataGridViewTextBoxColumn.HeaderText = "Kod";
+            this.kodDataGridViewTextBoxColumn.Name = "kodDataGridViewTextBoxColumn";
+            // 
+            // grupaDataGridViewTextBoxColumn
+            // 
+            this.grupaDataGridViewTextBoxColumn.DataPropertyName = "Grupa";
+            this.grupaDataGridViewTextBoxColumn.HeaderText = "Grupa";
+            this.grupaDataGridViewTextBoxColumn.Name = "grupaDataGridViewTextBoxColumn";
+            // 
+            // dostawcyBindingSource
+            // 
+            this.dostawcyBindingSource.DataSource = typeof(MagazynAplikacja.Dostawcy);
+            // 
             // textBox_ilosc
             // 
             this.textBox_ilosc.Location = new System.Drawing.Point(780, 183);
@@ -664,58 +716,6 @@
             this.panel_Dostawa.Size = new System.Drawing.Size(1020, 706);
             this.panel_Dostawa.TabIndex = 44;
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            // 
-            // kontrahentDataGridViewTextBoxColumn
-            // 
-            this.kontrahentDataGridViewTextBoxColumn.DataPropertyName = "Kontrahent";
-            this.kontrahentDataGridViewTextBoxColumn.HeaderText = "Kontrahent";
-            this.kontrahentDataGridViewTextBoxColumn.Name = "kontrahentDataGridViewTextBoxColumn";
-            // 
-            // nazwaskroconaDataGridViewTextBoxColumn
-            // 
-            this.nazwaskroconaDataGridViewTextBoxColumn.DataPropertyName = "Nazwa_skrocona";
-            this.nazwaskroconaDataGridViewTextBoxColumn.HeaderText = "Nazwa_skrocona";
-            this.nazwaskroconaDataGridViewTextBoxColumn.Name = "nazwaskroconaDataGridViewTextBoxColumn";
-            // 
-            // nIPDataGridViewTextBoxColumn
-            // 
-            this.nIPDataGridViewTextBoxColumn.DataPropertyName = "NIP";
-            this.nIPDataGridViewTextBoxColumn.HeaderText = "NIP";
-            this.nIPDataGridViewTextBoxColumn.Name = "nIPDataGridViewTextBoxColumn";
-            // 
-            // adressDataGridViewTextBoxColumn
-            // 
-            this.adressDataGridViewTextBoxColumn.DataPropertyName = "Adress";
-            this.adressDataGridViewTextBoxColumn.HeaderText = "Adress";
-            this.adressDataGridViewTextBoxColumn.Name = "adressDataGridViewTextBoxColumn";
-            // 
-            // miejscowoscDataGridViewTextBoxColumn
-            // 
-            this.miejscowoscDataGridViewTextBoxColumn.DataPropertyName = "Miejscowosc";
-            this.miejscowoscDataGridViewTextBoxColumn.HeaderText = "Miejscowosc";
-            this.miejscowoscDataGridViewTextBoxColumn.Name = "miejscowoscDataGridViewTextBoxColumn";
-            // 
-            // kodDataGridViewTextBoxColumn
-            // 
-            this.kodDataGridViewTextBoxColumn.DataPropertyName = "Kod";
-            this.kodDataGridViewTextBoxColumn.HeaderText = "Kod";
-            this.kodDataGridViewTextBoxColumn.Name = "kodDataGridViewTextBoxColumn";
-            // 
-            // grupaDataGridViewTextBoxColumn
-            // 
-            this.grupaDataGridViewTextBoxColumn.DataPropertyName = "Grupa";
-            this.grupaDataGridViewTextBoxColumn.HeaderText = "Grupa";
-            this.grupaDataGridViewTextBoxColumn.Name = "grupaDataGridViewTextBoxColumn";
-            // 
-            // dostawcyBindingSource
-            // 
-            this.dostawcyBindingSource.DataSource = typeof(MagazynAplikacja.Dostawcy);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -743,9 +743,9 @@
             this.panel_Dostawa_Main.ResumeLayout(false);
             this.panel_Dostawa_Main.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dostawcyBindingSource)).EndInit();
             this.panel_Dostawa.ResumeLayout(false);
             this.panel_Dostawa.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dostawcyBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
