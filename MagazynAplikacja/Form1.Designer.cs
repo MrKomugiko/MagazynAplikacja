@@ -65,17 +65,38 @@
             this.panel_Zamowienia = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.Btn_Dostawa = new System.Windows.Forms.Button();
-            this.Btn_Dostawa2 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panel_Dostawa_Main = new System.Windows.Forms.Panel();
+            this.Btn_Dostawcy = new System.Windows.Forms.Button();
+            this.Btn_Produkty = new System.Windows.Forms.Button();
+            this.panel_Dostawcy_Main = new System.Windows.Forms.Panel();
             this.Btn_Dostawca_Export = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.Btn_Dostawca_Import = new System.Windows.Forms.Button();
             this.Btn_Dostawca_Edit = new System.Windows.Forms.Button();
             this.Btn_Dostawca_New = new System.Windows.Forms.Button();
-            this.Btn_Dostawca_Select = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
+            this.Label_Dostawcy = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.textBox_ilosc = new System.Windows.Forms.TextBox();
+            this.textBox_VAT = new System.Windows.Forms.TextBox();
+            this.textBox2_Nazwa = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel_Dostawa = new System.Windows.Forms.Panel();
+            this.panel_Produkty_Main = new System.Windows.Forms.Panel();
+            this.Label_Podukty = new System.Windows.Forms.Label();
+            this.Btn_Produkty_Export = new System.Windows.Forms.Button();
+            this.Btn_Produkty_Back = new System.Windows.Forms.Button();
+            this.Btn_Produkty_Import = new System.Windows.Forms.Button();
+            this.Btn_Produkty_Edit = new System.Windows.Forms.Button();
+            this.Btn_Produkty_New = new System.Windows.Forms.Button();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kontrahentDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nazwaskroconaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nIPDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adressDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.miejscowoscDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kodDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grupaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dostawcyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kontrahentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazwaskroconaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,19 +105,15 @@
             this.miejscowoscDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grupaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dostawcyBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.textBox_ilosc = new System.Windows.Forms.TextBox();
-            this.textBox_VAT = new System.Windows.Forms.TextBox();
-            this.textBox2_Nazwa = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel_Dostawa = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel_Magazyn.SuspendLayout();
             this.panel_Zamowienia.SuspendLayout();
-            this.panel_Dostawa_Main.SuspendLayout();
+            this.panel_Dostawcy_Main.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dostawcyBindingSource)).BeginInit();
             this.panel_Dostawa.SuspendLayout();
+            this.panel_Produkty_Main.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dostawcyBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Btn_loadXML
@@ -441,51 +458,50 @@
             this.Btn_Dostawa.UseVisualStyleBackColor = true;
             this.Btn_Dostawa.Click += new System.EventHandler(this.Btn_Dostawa_Click);
             // 
-            // Btn_Dostawa2
+            // Btn_Dostawcy
             // 
-            this.Btn_Dostawa2.Location = new System.Drawing.Point(12, 9);
-            this.Btn_Dostawa2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Btn_Dostawa2.Name = "Btn_Dostawa2";
-            this.Btn_Dostawa2.Size = new System.Drawing.Size(147, 50);
-            this.Btn_Dostawa2.TabIndex = 39;
-            this.Btn_Dostawa2.Text = "Dostawcy";
-            this.Btn_Dostawa2.UseVisualStyleBackColor = true;
-            this.Btn_Dostawa2.Click += new System.EventHandler(this.Btn_Dostawa2_Click);
+            this.Btn_Dostawcy.Location = new System.Drawing.Point(12, 9);
+            this.Btn_Dostawcy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Btn_Dostawcy.Name = "Btn_Dostawcy";
+            this.Btn_Dostawcy.Size = new System.Drawing.Size(147, 50);
+            this.Btn_Dostawcy.TabIndex = 39;
+            this.Btn_Dostawcy.Text = "Dostawcy";
+            this.Btn_Dostawcy.UseVisualStyleBackColor = true;
+            this.Btn_Dostawcy.Click += new System.EventHandler(this.Btn_Dostawcy_Click);
             // 
-            // button2
+            // Btn_Produkty
             // 
-            this.button2.Enabled = false;
-            this.button2.Location = new System.Drawing.Point(12, 62);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(147, 50);
-            this.button2.TabIndex = 38;
-            this.button2.Text = "EMPTY 2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Btn_Produkty.Location = new System.Drawing.Point(12, 62);
+            this.Btn_Produkty.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Btn_Produkty.Name = "Btn_Produkty";
+            this.Btn_Produkty.Size = new System.Drawing.Size(147, 50);
+            this.Btn_Produkty.TabIndex = 38;
+            this.Btn_Produkty.Text = "Produkty";
+            this.Btn_Produkty.UseVisualStyleBackColor = true;
+            this.Btn_Produkty.Click += new System.EventHandler(this.Btn_Produkty_Click);
             // 
-            // panel_Dostawa_Main
+            // panel_Dostawcy_Main
             // 
-            this.panel_Dostawa_Main.BackColor = System.Drawing.SystemColors.Control;
-            this.panel_Dostawa_Main.Controls.Add(this.Btn_Dostawca_Export);
-            this.panel_Dostawa_Main.Controls.Add(this.button7);
-            this.panel_Dostawa_Main.Controls.Add(this.Btn_Dostawca_Import);
-            this.panel_Dostawa_Main.Controls.Add(this.Btn_Dostawca_Edit);
-            this.panel_Dostawa_Main.Controls.Add(this.Btn_Dostawca_New);
-            this.panel_Dostawa_Main.Controls.Add(this.Btn_Dostawca_Select);
-            this.panel_Dostawa_Main.Controls.Add(this.label14);
-            this.panel_Dostawa_Main.Controls.Add(this.dataGridView2);
-            this.panel_Dostawa_Main.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.panel_Dostawa_Main.Location = new System.Drawing.Point(180, 11);
-            this.panel_Dostawa_Main.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel_Dostawa_Main.Name = "panel_Dostawa_Main";
-            this.panel_Dostawa_Main.Size = new System.Drawing.Size(1017, 704);
-            this.panel_Dostawa_Main.TabIndex = 1;
+            this.panel_Dostawcy_Main.BackColor = System.Drawing.SystemColors.Control;
+            this.panel_Dostawcy_Main.Controls.Add(this.Btn_Dostawca_Export);
+            this.panel_Dostawcy_Main.Controls.Add(this.button7);
+            this.panel_Dostawcy_Main.Controls.Add(this.Btn_Dostawca_Import);
+            this.panel_Dostawcy_Main.Controls.Add(this.Btn_Dostawca_Edit);
+            this.panel_Dostawcy_Main.Controls.Add(this.Btn_Dostawca_New);
+            this.panel_Dostawcy_Main.Controls.Add(this.Label_Dostawcy);
+            this.panel_Dostawcy_Main.Controls.Add(this.dataGridView2);
+            this.panel_Dostawcy_Main.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.panel_Dostawcy_Main.Location = new System.Drawing.Point(180, 11);
+            this.panel_Dostawcy_Main.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel_Dostawcy_Main.Name = "panel_Dostawcy_Main";
+            this.panel_Dostawcy_Main.Size = new System.Drawing.Size(1017, 704);
+            this.panel_Dostawcy_Main.TabIndex = 1;
             // 
             // Btn_Dostawca_Export
             // 
             this.Btn_Dostawca_Export.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Btn_Dostawca_Export.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Btn_Dostawca_Export.Location = new System.Drawing.Point(805, 17);
+            this.Btn_Dostawca_Export.Location = new System.Drawing.Point(859, 17);
             this.Btn_Dostawca_Export.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Dostawca_Export.Name = "Btn_Dostawca_Export";
             this.Btn_Dostawca_Export.Size = new System.Drawing.Size(147, 50);
@@ -511,7 +527,7 @@
             // 
             this.Btn_Dostawca_Import.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Btn_Dostawca_Import.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Btn_Dostawca_Import.Location = new System.Drawing.Point(73, 17);
+            this.Btn_Dostawca_Import.Location = new System.Drawing.Point(706, 17);
             this.Btn_Dostawca_Import.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Dostawca_Import.Name = "Btn_Dostawca_Import";
             this.Btn_Dostawca_Import.Size = new System.Drawing.Size(147, 50);
@@ -525,19 +541,20 @@
             this.Btn_Dostawca_Edit.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Btn_Dostawca_Edit.Enabled = false;
             this.Btn_Dostawca_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Btn_Dostawca_Edit.Location = new System.Drawing.Point(439, 17);
+            this.Btn_Dostawca_Edit.Location = new System.Drawing.Point(166, 17);
             this.Btn_Dostawca_Edit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Dostawca_Edit.Name = "Btn_Dostawca_Edit";
             this.Btn_Dostawca_Edit.Size = new System.Drawing.Size(147, 50);
             this.Btn_Dostawca_Edit.TabIndex = 42;
             this.Btn_Dostawca_Edit.Text = "EDIT";
             this.Btn_Dostawca_Edit.UseVisualStyleBackColor = false;
+            this.Btn_Dostawca_Edit.Click += new System.EventHandler(this.Btn_Dostawca_Edit_Click);
             // 
             // Btn_Dostawca_New
             // 
             this.Btn_Dostawca_New.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Btn_Dostawca_New.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Btn_Dostawca_New.Location = new System.Drawing.Point(621, 17);
+            this.Btn_Dostawca_New.Location = new System.Drawing.Point(13, 17);
             this.Btn_Dostawca_New.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Dostawca_New.Name = "Btn_Dostawca_New";
             this.Btn_Dostawca_New.Size = new System.Drawing.Size(147, 50);
@@ -546,27 +563,14 @@
             this.Btn_Dostawca_New.UseVisualStyleBackColor = false;
             this.Btn_Dostawca_New.Click += new System.EventHandler(this.Btn_Dostawca_New_Click);
             // 
-            // Btn_Dostawca_Select
+            // Label_Dostawcy
             // 
-            this.Btn_Dostawca_Select.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.Btn_Dostawca_Select.Enabled = false;
-            this.Btn_Dostawca_Select.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Btn_Dostawca_Select.Location = new System.Drawing.Point(256, 17);
-            this.Btn_Dostawca_Select.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Btn_Dostawca_Select.Name = "Btn_Dostawca_Select";
-            this.Btn_Dostawca_Select.Size = new System.Drawing.Size(147, 50);
-            this.Btn_Dostawca_Select.TabIndex = 41;
-            this.Btn_Dostawca_Select.Text = "SELECT";
-            this.Btn_Dostawca_Select.UseVisualStyleBackColor = false;
-            this.Btn_Dostawca_Select.Click += new System.EventHandler(this.Btn_Dostawca_Select_Click);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(901, 17);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(0, 29);
-            this.label14.TabIndex = 0;
+            this.Label_Dostawcy.AutoSize = true;
+            this.Label_Dostawcy.Location = new System.Drawing.Point(415, 28);
+            this.Label_Dostawcy.Name = "Label_Dostawcy";
+            this.Label_Dostawcy.Size = new System.Drawing.Size(165, 29);
+            this.Label_Dostawcy.TabIndex = 0;
+            this.Label_Dostawcy.Text = "DOSTAWCY";
             // 
             // dataGridView2
             // 
@@ -577,15 +581,16 @@
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.kontrahentDataGridViewTextBoxColumn,
-            this.nazwaskroconaDataGridViewTextBoxColumn,
-            this.nIPDataGridViewTextBoxColumn,
-            this.adressDataGridViewTextBoxColumn,
-            this.miejscowoscDataGridViewTextBoxColumn,
-            this.kodDataGridViewTextBoxColumn,
-            this.grupaDataGridViewTextBoxColumn});
+            this.idDataGridViewTextBoxColumn1,
+            this.kontrahentDataGridViewTextBoxColumn1,
+            this.nazwaskroconaDataGridViewTextBoxColumn1,
+            this.nIPDataGridViewTextBoxColumn1,
+            this.adressDataGridViewTextBoxColumn1,
+            this.miejscowoscDataGridViewTextBoxColumn1,
+            this.kodDataGridViewTextBoxColumn1,
+            this.grupaDataGridViewTextBoxColumn1});
             this.dataGridView2.DataSource = this.dostawcyBindingSource;
+            this.dataGridView2.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView2.EnableHeadersVisualStyles = false;
             this.dataGridView2.Location = new System.Drawing.Point(13, 78);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -595,58 +600,7 @@
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(993, 560);
             this.dataGridView2.TabIndex = 46;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            // 
-            // kontrahentDataGridViewTextBoxColumn
-            // 
-            this.kontrahentDataGridViewTextBoxColumn.DataPropertyName = "Kontrahent";
-            this.kontrahentDataGridViewTextBoxColumn.HeaderText = "Kontrahent";
-            this.kontrahentDataGridViewTextBoxColumn.Name = "kontrahentDataGridViewTextBoxColumn";
-            // 
-            // nazwaskroconaDataGridViewTextBoxColumn
-            // 
-            this.nazwaskroconaDataGridViewTextBoxColumn.DataPropertyName = "Nazwa_skrocona";
-            this.nazwaskroconaDataGridViewTextBoxColumn.HeaderText = "Nazwa_skrocona";
-            this.nazwaskroconaDataGridViewTextBoxColumn.Name = "nazwaskroconaDataGridViewTextBoxColumn";
-            // 
-            // nIPDataGridViewTextBoxColumn
-            // 
-            this.nIPDataGridViewTextBoxColumn.DataPropertyName = "NIP";
-            this.nIPDataGridViewTextBoxColumn.HeaderText = "NIP";
-            this.nIPDataGridViewTextBoxColumn.Name = "nIPDataGridViewTextBoxColumn";
-            // 
-            // adressDataGridViewTextBoxColumn
-            // 
-            this.adressDataGridViewTextBoxColumn.DataPropertyName = "Adress";
-            this.adressDataGridViewTextBoxColumn.HeaderText = "Adress";
-            this.adressDataGridViewTextBoxColumn.Name = "adressDataGridViewTextBoxColumn";
-            // 
-            // miejscowoscDataGridViewTextBoxColumn
-            // 
-            this.miejscowoscDataGridViewTextBoxColumn.DataPropertyName = "Miejscowosc";
-            this.miejscowoscDataGridViewTextBoxColumn.HeaderText = "Miejscowosc";
-            this.miejscowoscDataGridViewTextBoxColumn.Name = "miejscowoscDataGridViewTextBoxColumn";
-            // 
-            // kodDataGridViewTextBoxColumn
-            // 
-            this.kodDataGridViewTextBoxColumn.DataPropertyName = "Kod";
-            this.kodDataGridViewTextBoxColumn.HeaderText = "Kod";
-            this.kodDataGridViewTextBoxColumn.Name = "kodDataGridViewTextBoxColumn";
-            // 
-            // grupaDataGridViewTextBoxColumn
-            // 
-            this.grupaDataGridViewTextBoxColumn.DataPropertyName = "Grupa";
-            this.grupaDataGridViewTextBoxColumn.HeaderText = "Grupa";
-            this.grupaDataGridViewTextBoxColumn.Name = "grupaDataGridViewTextBoxColumn";
-            // 
-            // dostawcyBindingSource
-            // 
-            this.dostawcyBindingSource.DataSource = typeof(MagazynAplikacja.Dostawcy);
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
             // textBox_ilosc
             // 
@@ -716,18 +670,235 @@
             this.panel_Dostawa.Size = new System.Drawing.Size(1020, 706);
             this.panel_Dostawa.TabIndex = 44;
             // 
+            // panel_Produkty_Main
+            // 
+            this.panel_Produkty_Main.BackColor = System.Drawing.SystemColors.Control;
+            this.panel_Produkty_Main.Controls.Add(this.Label_Podukty);
+            this.panel_Produkty_Main.Controls.Add(this.Btn_Produkty_Export);
+            this.panel_Produkty_Main.Controls.Add(this.Btn_Produkty_Back);
+            this.panel_Produkty_Main.Controls.Add(this.Btn_Produkty_Import);
+            this.panel_Produkty_Main.Controls.Add(this.Btn_Produkty_Edit);
+            this.panel_Produkty_Main.Controls.Add(this.Btn_Produkty_New);
+            this.panel_Produkty_Main.Controls.Add(this.dataGridView3);
+            this.panel_Produkty_Main.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.panel_Produkty_Main.Location = new System.Drawing.Point(180, 11);
+            this.panel_Produkty_Main.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel_Produkty_Main.Name = "panel_Produkty_Main";
+            this.panel_Produkty_Main.Size = new System.Drawing.Size(1017, 704);
+            this.panel_Produkty_Main.TabIndex = 45;
+            // 
+            // Label_Podukty
+            // 
+            this.Label_Podukty.AutoSize = true;
+            this.Label_Podukty.Location = new System.Drawing.Point(415, 28);
+            this.Label_Podukty.Name = "Label_Podukty";
+            this.Label_Podukty.Size = new System.Drawing.Size(159, 29);
+            this.Label_Podukty.TabIndex = 48;
+            this.Label_Podukty.Text = "PRODUKTY";
+            // 
+            // Btn_Produkty_Export
+            // 
+            this.Btn_Produkty_Export.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Btn_Produkty_Export.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Btn_Produkty_Export.Location = new System.Drawing.Point(859, 17);
+            this.Btn_Produkty_Export.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Btn_Produkty_Export.Name = "Btn_Produkty_Export";
+            this.Btn_Produkty_Export.Size = new System.Drawing.Size(147, 50);
+            this.Btn_Produkty_Export.TabIndex = 47;
+            this.Btn_Produkty_Export.Text = "EXPORT";
+            this.Btn_Produkty_Export.UseVisualStyleBackColor = false;
+            // 
+            // Btn_Produkty_Back
+            // 
+            this.Btn_Produkty_Back.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Btn_Produkty_Back.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Btn_Produkty_Back.Location = new System.Drawing.Point(859, 645);
+            this.Btn_Produkty_Back.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Btn_Produkty_Back.Name = "Btn_Produkty_Back";
+            this.Btn_Produkty_Back.Size = new System.Drawing.Size(147, 50);
+            this.Btn_Produkty_Back.TabIndex = 44;
+            this.Btn_Produkty_Back.Text = "BACK";
+            this.Btn_Produkty_Back.UseVisualStyleBackColor = false;
+            this.Btn_Produkty_Back.Click += new System.EventHandler(this.Btn_Produkty_Back_Click);
+            // 
+            // Btn_Produkty_Import
+            // 
+            this.Btn_Produkty_Import.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Btn_Produkty_Import.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Btn_Produkty_Import.Location = new System.Drawing.Point(706, 17);
+            this.Btn_Produkty_Import.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Btn_Produkty_Import.Name = "Btn_Produkty_Import";
+            this.Btn_Produkty_Import.Size = new System.Drawing.Size(147, 50);
+            this.Btn_Produkty_Import.TabIndex = 40;
+            this.Btn_Produkty_Import.Text = "IMPORT";
+            this.Btn_Produkty_Import.UseVisualStyleBackColor = false;
+            // 
+            // Btn_Produkty_Edit
+            // 
+            this.Btn_Produkty_Edit.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Btn_Produkty_Edit.Enabled = false;
+            this.Btn_Produkty_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Btn_Produkty_Edit.Location = new System.Drawing.Point(166, 17);
+            this.Btn_Produkty_Edit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Btn_Produkty_Edit.Name = "Btn_Produkty_Edit";
+            this.Btn_Produkty_Edit.Size = new System.Drawing.Size(147, 50);
+            this.Btn_Produkty_Edit.TabIndex = 42;
+            this.Btn_Produkty_Edit.Text = "EDIT";
+            this.Btn_Produkty_Edit.UseVisualStyleBackColor = false;
+            // 
+            // Btn_Produkty_New
+            // 
+            this.Btn_Produkty_New.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Btn_Produkty_New.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Btn_Produkty_New.Location = new System.Drawing.Point(13, 17);
+            this.Btn_Produkty_New.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Btn_Produkty_New.Name = "Btn_Produkty_New";
+            this.Btn_Produkty_New.Size = new System.Drawing.Size(147, 50);
+            this.Btn_Produkty_New.TabIndex = 43;
+            this.Btn_Produkty_New.Text = "NEW";
+            this.Btn_Produkty_New.UseVisualStyleBackColor = false;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.AllowUserToOrderColumns = true;
+            this.dataGridView3.AutoGenerateColumns = false;
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.kontrahentDataGridViewTextBoxColumn,
+            this.nazwaskroconaDataGridViewTextBoxColumn,
+            this.nIPDataGridViewTextBoxColumn,
+            this.adressDataGridViewTextBoxColumn,
+            this.miejscowoscDataGridViewTextBoxColumn,
+            this.kodDataGridViewTextBoxColumn,
+            this.grupaDataGridViewTextBoxColumn});
+            this.dataGridView3.DataSource = this.dostawcyBindingSource;
+            this.dataGridView3.EnableHeadersVisualStyles = false;
+            this.dataGridView3.Location = new System.Drawing.Point(13, 78);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dataGridView3.RowHeadersWidth = 37;
+            this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView3.Size = new System.Drawing.Size(993, 560);
+            this.dataGridView3.TabIndex = 46;
+            // 
+            // idDataGridViewTextBoxColumn1
+            // 
+            this.idDataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn1.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+            // 
+            // kontrahentDataGridViewTextBoxColumn1
+            // 
+            this.kontrahentDataGridViewTextBoxColumn1.DataPropertyName = "Kontrahent";
+            this.kontrahentDataGridViewTextBoxColumn1.HeaderText = "Kontrahent";
+            this.kontrahentDataGridViewTextBoxColumn1.Name = "kontrahentDataGridViewTextBoxColumn1";
+            // 
+            // nazwaskroconaDataGridViewTextBoxColumn1
+            // 
+            this.nazwaskroconaDataGridViewTextBoxColumn1.DataPropertyName = "Nazwa_skrocona";
+            this.nazwaskroconaDataGridViewTextBoxColumn1.HeaderText = "Nazwa_skrocona";
+            this.nazwaskroconaDataGridViewTextBoxColumn1.Name = "nazwaskroconaDataGridViewTextBoxColumn1";
+            // 
+            // nIPDataGridViewTextBoxColumn1
+            // 
+            this.nIPDataGridViewTextBoxColumn1.DataPropertyName = "NIP";
+            this.nIPDataGridViewTextBoxColumn1.HeaderText = "NIP";
+            this.nIPDataGridViewTextBoxColumn1.Name = "nIPDataGridViewTextBoxColumn1";
+            // 
+            // adressDataGridViewTextBoxColumn1
+            // 
+            this.adressDataGridViewTextBoxColumn1.DataPropertyName = "Adress";
+            this.adressDataGridViewTextBoxColumn1.HeaderText = "Adress";
+            this.adressDataGridViewTextBoxColumn1.Name = "adressDataGridViewTextBoxColumn1";
+            // 
+            // miejscowoscDataGridViewTextBoxColumn1
+            // 
+            this.miejscowoscDataGridViewTextBoxColumn1.DataPropertyName = "Miejscowosc";
+            this.miejscowoscDataGridViewTextBoxColumn1.HeaderText = "Miejscowosc";
+            this.miejscowoscDataGridViewTextBoxColumn1.Name = "miejscowoscDataGridViewTextBoxColumn1";
+            // 
+            // kodDataGridViewTextBoxColumn1
+            // 
+            this.kodDataGridViewTextBoxColumn1.DataPropertyName = "Kod";
+            this.kodDataGridViewTextBoxColumn1.HeaderText = "Kod";
+            this.kodDataGridViewTextBoxColumn1.Name = "kodDataGridViewTextBoxColumn1";
+            // 
+            // grupaDataGridViewTextBoxColumn1
+            // 
+            this.grupaDataGridViewTextBoxColumn1.DataPropertyName = "Grupa";
+            this.grupaDataGridViewTextBoxColumn1.HeaderText = "Grupa";
+            this.grupaDataGridViewTextBoxColumn1.Name = "grupaDataGridViewTextBoxColumn1";
+            // 
+            // dostawcyBindingSource
+            // 
+            this.dostawcyBindingSource.DataSource = typeof(MagazynAplikacja.Dostawcy);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // kontrahentDataGridViewTextBoxColumn
+            // 
+            this.kontrahentDataGridViewTextBoxColumn.DataPropertyName = "Kontrahent";
+            this.kontrahentDataGridViewTextBoxColumn.HeaderText = "Kontrahent";
+            this.kontrahentDataGridViewTextBoxColumn.Name = "kontrahentDataGridViewTextBoxColumn";
+            // 
+            // nazwaskroconaDataGridViewTextBoxColumn
+            // 
+            this.nazwaskroconaDataGridViewTextBoxColumn.DataPropertyName = "Nazwa_skrocona";
+            this.nazwaskroconaDataGridViewTextBoxColumn.HeaderText = "Nazwa_skrocona";
+            this.nazwaskroconaDataGridViewTextBoxColumn.Name = "nazwaskroconaDataGridViewTextBoxColumn";
+            // 
+            // nIPDataGridViewTextBoxColumn
+            // 
+            this.nIPDataGridViewTextBoxColumn.DataPropertyName = "NIP";
+            this.nIPDataGridViewTextBoxColumn.HeaderText = "NIP";
+            this.nIPDataGridViewTextBoxColumn.Name = "nIPDataGridViewTextBoxColumn";
+            // 
+            // adressDataGridViewTextBoxColumn
+            // 
+            this.adressDataGridViewTextBoxColumn.DataPropertyName = "Adress";
+            this.adressDataGridViewTextBoxColumn.HeaderText = "Adress";
+            this.adressDataGridViewTextBoxColumn.Name = "adressDataGridViewTextBoxColumn";
+            // 
+            // miejscowoscDataGridViewTextBoxColumn
+            // 
+            this.miejscowoscDataGridViewTextBoxColumn.DataPropertyName = "Miejscowosc";
+            this.miejscowoscDataGridViewTextBoxColumn.HeaderText = "Miejscowosc";
+            this.miejscowoscDataGridViewTextBoxColumn.Name = "miejscowoscDataGridViewTextBoxColumn";
+            // 
+            // kodDataGridViewTextBoxColumn
+            // 
+            this.kodDataGridViewTextBoxColumn.DataPropertyName = "Kod";
+            this.kodDataGridViewTextBoxColumn.HeaderText = "Kod";
+            this.kodDataGridViewTextBoxColumn.Name = "kodDataGridViewTextBoxColumn";
+            // 
+            // grupaDataGridViewTextBoxColumn
+            // 
+            this.grupaDataGridViewTextBoxColumn.DataPropertyName = "Grupa";
+            this.grupaDataGridViewTextBoxColumn.HeaderText = "Grupa";
+            this.grupaDataGridViewTextBoxColumn.Name = "grupaDataGridViewTextBoxColumn";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1209, 732);
-            this.Controls.Add(this.Btn_Dostawa2);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Btn_Dostawcy);
+            this.Controls.Add(this.Btn_Produkty);
             this.Controls.Add(this.Btn_Magazyn);
             this.Controls.Add(this.Btn_Zamowienia);
             this.Controls.Add(this.Btn_loadXML);
             this.Controls.Add(this.Btn_Dostawa);
-            this.Controls.Add(this.panel_Dostawa_Main);
+            this.Controls.Add(this.panel_Dostawcy_Main);
+            this.Controls.Add(this.panel_Produkty_Main);
             this.Controls.Add(this.panel_Dostawa);
             this.Controls.Add(this.panel_Zamowienia);
             this.Controls.Add(this.panel_Magazyn);
@@ -740,12 +911,15 @@
             this.panel_Magazyn.PerformLayout();
             this.panel_Zamowienia.ResumeLayout(false);
             this.panel_Zamowienia.PerformLayout();
-            this.panel_Dostawa_Main.ResumeLayout(false);
-            this.panel_Dostawa_Main.PerformLayout();
+            this.panel_Dostawcy_Main.ResumeLayout(false);
+            this.panel_Dostawcy_Main.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dostawcyBindingSource)).EndInit();
             this.panel_Dostawa.ResumeLayout(false);
             this.panel_Dostawa.PerformLayout();
+            this.panel_Produkty_Main.ResumeLayout(false);
+            this.panel_Produkty_Main.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dostawcyBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -782,14 +956,13 @@
         private System.Windows.Forms.Panel panel_Zamowienia;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button Btn_Dostawa;
-        private System.Windows.Forms.Button Btn_Dostawa2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panel_Dostawa_Main;
+        private System.Windows.Forms.Button Btn_Dostawcy;
+        private System.Windows.Forms.Button Btn_Produkty;
+        private System.Windows.Forms.Panel panel_Dostawcy_Main;
         private System.Windows.Forms.Button Btn_Dostawca_Import;
         private System.Windows.Forms.Button Btn_Dostawca_Edit;
         private System.Windows.Forms.Button Btn_Dostawca_New;
-        private System.Windows.Forms.Button Btn_Dostawca_Select;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label Label_Dostawcy;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button Btn_Dostawca_Export;
@@ -813,6 +986,22 @@
         private System.Windows.Forms.TextBox textBox2_Nazwa;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel_Dostawa;
+        private System.Windows.Forms.Panel panel_Produkty_Main;
+        private System.Windows.Forms.Button Btn_Produkty_Export;
+        private System.Windows.Forms.Button Btn_Produkty_Back;
+        private System.Windows.Forms.Button Btn_Produkty_Import;
+        private System.Windows.Forms.Button Btn_Produkty_Edit;
+        private System.Windows.Forms.Button Btn_Produkty_New;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.Label Label_Podukty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kontrahentDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nazwaskroconaDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nIPDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adressDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn miejscowoscDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kodDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn grupaDataGridViewTextBoxColumn1;
     }
 }
 

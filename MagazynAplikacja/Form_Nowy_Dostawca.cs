@@ -48,6 +48,16 @@ namespace MagazynAplikacja
         private void Btn_Zatwierdz_DodajNowy_Click(object sender, EventArgs e)
         {
             DodajDostawce();
+            int numerID = listDostawcy.Count + 999;
+            Label_ID.Text = numerID.ToString();
+
+            TextBox_Firma.Text = null;
+            TextBox_Nazwa.Text = null;
+            TextBox_NIP.Text = null;
+            TextBox_Grupa.Text = null;
+            TextBox_Adres.Text = null;
+            TextBox_Miejscowosc.Text = null;
+            TextBox_Kod.Text = null;
         }
 
         protected void DodajDostawce()

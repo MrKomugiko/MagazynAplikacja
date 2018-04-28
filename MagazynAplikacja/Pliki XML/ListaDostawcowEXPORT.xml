@@ -20,4 +20,44 @@
     <Kod>80-20</Kod>
     <Grupa>0</Grupa>
   </Dostawcy>
+  <Dostawcy>
+    <id>1001</id>
+    <Kontrahent>fbfbf</Kontrahent>
+    <Nazwa_skrocona>bfdbd</Nazwa_skrocona>
+    <NIP>54335</NIP>
+    <Adress>gfeg</Adress>
+    <Miejscowosc>ggeg</Miejscowosc>
+    <Kod>4335</Kod>
+    <Grupa>0</Grupa>
+  </Dostawcy>
+  <Dostawcy>
+    <id>1002</id>
+    <Kontrahent>fdgfd</Kontrahent>
+    <Nazwa_skrocona>gfdgfd</Nazwa_skrocona>
+    <NIP>24324</NIP>
+    <Adress>dsfsd</Adress>
+    <Miejscowosc>fdsfds</Miejscowosc>
+    <Kod>34324</Kod>
+    <Grupa>0</Grupa>
+  </Dostawcy>
+  <Dostawcy>
+    <id>1003</id>
+    <Kontrahent>11111111</Kontrahent>
+    <Nazwa_skrocona>gfdgfd</Nazwa_skrocona>
+    <NIP>24324</NIP>
+    <Adress>dsfsd</Adress>
+    <Miejscowosc>fdsfds</Miejscowosc>
+    <Kod>34324</Kod>
+    <Grupa>0</Grupa>
+  </Dostawcy>
+  <Dostawcy>
+    <id>1004</id>
+    <Kontrahent>222</Kontrahent>
+    <Nazwa_skrocona>gfdgfd</Nazwa_skrocona>
+    <NIP>24324</NIP>
+    <Adress>dsfsd</Adress>
+    <Miejscowosc>fdsfds</Miejscowosc>
+    <Kod>34324</Kod>
+    <Grupa>0</Grupa>
+  </Dostawcy>
 </ArrayOfDostawcy>

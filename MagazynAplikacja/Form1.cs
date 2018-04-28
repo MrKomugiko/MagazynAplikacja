@@ -30,30 +30,16 @@ namespace MagazynAplikacja
         private void Form1_Load(object sender, EventArgs e)
         {
             
-            listPanel.Add(panel_Magazyn);           //0
-            listPanel.Add(panel_Zamowienia);        //1
-            listPanel.Add(panel_Dostawa_Main);      //2
+            listPanel.Add(panel_Magazyn);           // 0
+            listPanel.Add(panel_Zamowienia);        // 1
+            listPanel.Add(panel_Dostawcy_Main);     // 2
+            listPanel.Add(panel_Produkty_Main);     // 3
             UkryjPanele();
         }
 
         /* OFF */ private void Btn_loadXML_Click(object sender, EventArgs e)
         {
-        //    string wynik = " ";
-        //    OpenFileDialog ofd = new OpenFileDialog();
-        //    ofd.Filter = "XML|*.xml";
-        //    if (ofd.ShowDialog() == DialogResult.OK)
-        //    {
-        //        XmlDocument xDoc = new XmlDocument();
-        //        xDoc.Load(ofd.FileName);
-        //        var myDiv = xDoc.DocumentElement.SelectNodes("//Faktura/Dostawca/Nazwa");
 
-        //        for (int i = 0; i < myDiv.Count; i++)
-        //        {
-        //            wynik += "[" + (i + 1) + "] " + myDiv[i].InnerText + " \n ";
-        //        }
-
-        //        label_WynikDostawcy.Text = wynik;
-        //    }
         }
 
         private void button_Dodaj_Click(object sender, EventArgs e)
@@ -199,7 +185,7 @@ namespace MagazynAplikacja
             UkryjPanele();
         }
 
-        private void Btn_Dostawa2_Click(object sender, EventArgs e)
+        private void Btn_Dostawcy_Click(object sender, EventArgs e)
         {
             UkryjPanele();
             listPanel[2].BringToFront();
@@ -209,9 +195,7 @@ namespace MagazynAplikacja
         {
             UkryjPanele();
         }
-
-
-        
+ 
         private void Btn_Dostawca_Import_Click(object sender, EventArgs e)
         {
             FileStream fs = new FileStream("..\\..\\Pliki XML\\ListaDostawcow.xml", FileMode.Open, FileAccess.Read);
@@ -234,7 +218,23 @@ namespace MagazynAplikacja
             Nowy_Dostawca.ShowDialog();
         }
 
-        private void Btn_Dostawca_Select_Click(object sender, EventArgs e)
+
+        private void Btn_Produkty_Back_Click(object sender, EventArgs e)
+        {
+            UkryjPanele();
+            listPanel[0].BringToFront();
+        }
+
+        private void Btn_Produkty_Click(object sender, EventArgs e)
+        {
+            listPanel[3].BringToFront();
+        }
+
+        /* ~ W.I.P ~ */ private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dataGridView2.SelectedRows[0].Cells[0].Value.ToString();      //pobranie z listy elementow dostawcy o podanym id
+        }   
+        /* ~ W.I.P ~ */private void Btn_Dostawca_Edit_Click(object sender, EventArgs e)
         {
 
         }

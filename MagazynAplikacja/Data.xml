@@ -1,0 +1,19 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Dostawca>
+    <Nazwa />
+    <NIP />
+    <Adres />
+    <Kod_Pocztowy />
+    <Miasto />
+  </Dostawca>
+  <Produkt>
+    <Nazwa>gfdg</Nazwa>
+    <Wartość_Netto>100</Wartość_Netto>
+    <Podatek>23</Podatek>
+    <Wartość_Brutto>123</Wartość_Brutto>
+    <Ilosc>100</Ilosc>
+    <Wartosc_calkowita_brutto>12300</Wartosc_calkowita_brutto>
+  </Produkt>
+  <Produkt />
+</NewDataSet>
