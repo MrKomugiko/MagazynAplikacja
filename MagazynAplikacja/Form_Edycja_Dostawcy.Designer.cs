@@ -50,9 +50,9 @@
             // 
             // Btn_Zatwierdz_Edytuj
             // 
-            this.Btn_Zatwierdz_Edytuj.Location = new System.Drawing.Point(608, 281);
+            this.Btn_Zatwierdz_Edytuj.Location = new System.Drawing.Point(572, 281);
             this.Btn_Zatwierdz_Edytuj.Name = "Btn_Zatwierdz_Edytuj";
-            this.Btn_Zatwierdz_Edytuj.Size = new System.Drawing.Size(151, 33);
+            this.Btn_Zatwierdz_Edytuj.Size = new System.Drawing.Size(187, 33);
             this.Btn_Zatwierdz_Edytuj.TabIndex = 53;
             this.Btn_Zatwierdz_Edytuj.Text = "EDYTUJ / ZAMKNIJ";
             this.Btn_Zatwierdz_Edytuj.UseVisualStyleBackColor = true;
@@ -223,7 +223,6 @@
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
-            this.Enabled = false;
             this.MaximumSize = new System.Drawing.Size(813, 373);
             this.MinimumSize = new System.Drawing.Size(813, 373);
             this.Name = "Form_Edycja_Dostawcy";
@@ -236,22 +235,22 @@
         #endregion
 
         private System.Windows.Forms.Button Btn_Zatwierdz_Edytuj;
-        private System.Windows.Forms.MaskedTextBox TextBox_Grupa;
-        private System.Windows.Forms.MaskedTextBox TextBox_Miejscowosc;
-        private System.Windows.Forms.MaskedTextBox TextBox_Adres;
-        private System.Windows.Forms.MaskedTextBox TextBox_NIP;
-        private System.Windows.Forms.MaskedTextBox TextBox_Nazwa;
-        private System.Windows.Forms.MaskedTextBox TextBox_Firma;
-        private System.Windows.Forms.MaskedTextBox TextBox_Kod;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label Label_ID;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
+        internal System.Windows.Forms.Label Label_ID;
+        protected internal System.Windows.Forms.MaskedTextBox TextBox_Firma;
+        protected internal System.Windows.Forms.MaskedTextBox TextBox_Grupa;
+        protected internal System.Windows.Forms.MaskedTextBox TextBox_Miejscowosc;
+        protected internal System.Windows.Forms.MaskedTextBox TextBox_Adres;
+        protected internal System.Windows.Forms.MaskedTextBox TextBox_NIP;
+        protected internal System.Windows.Forms.MaskedTextBox TextBox_Nazwa;
+        protected internal System.Windows.Forms.MaskedTextBox TextBox_Kod;
     }
 }

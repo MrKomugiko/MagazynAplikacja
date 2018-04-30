@@ -19,6 +19,7 @@ namespace MagazynAplikacja
         XmlSerializer xs;
         List<Dostawcy> listDostawcy;
 
+        //Przypisanie własności listy do listyDostawców oraz utworzenie odwołania do XmlSerializer'a
         public Form1()
         {
             InitializeComponent();
@@ -27,6 +28,7 @@ namespace MagazynAplikacja
             xs = new XmlSerializer(typeof(List<Dostawcy>));
         }
 
+        //PRzy starcie apki załaduje do listy wszystkie mozliwe panele w celu łatwiejszej organizacji 
         private void Form1_Load(object sender, EventArgs e)
         {
             
@@ -35,11 +37,6 @@ namespace MagazynAplikacja
             listPanel.Add(panel_Dostawcy_Main);     // 2
             listPanel.Add(panel_Produkty_Main);     // 3
             UkryjPanele();
-        }
-
-        /* OFF */ private void Btn_loadXML_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button_Dodaj_Click(object sender, EventArgs e)
@@ -53,12 +50,6 @@ namespace MagazynAplikacja
             dataGridView1.Rows[n].Cells[5].Value = (Convert.ToDouble(textBox_ilosc.Text) * Convert.ToDouble(textBox_Netto.Text) * ((Convert.ToDouble(textBox_VAT.Text)/100) + 1));
 
         }
-
-        /* EMPTY */ private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button_ZapiszXML_Click(object sender, EventArgs e)
         {
             DataSet ds = new DataSet();
@@ -104,7 +95,6 @@ namespace MagazynAplikacja
             
             
         }
-
         private void button_Zaladuj_Click(object sender, EventArgs e)
         {
             DataSet ds = new DataSet();
@@ -126,7 +116,6 @@ namespace MagazynAplikacja
 
             }
         }
-
         private void dataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             textBox_Nazwa.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
@@ -136,7 +125,6 @@ namespace MagazynAplikacja
             textBox_ilosc.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
 
         }
-
         private void button_Edytuj_Click(object sender, EventArgs e)
         {
             dataGridView1.SelectedRows[0].Cells[0].Value = textBox_Nazwa.Text;
@@ -146,56 +134,56 @@ namespace MagazynAplikacja
             dataGridView1.SelectedRows[0].Cells[4].Value = textBox_ilosc.Text;
             dataGridView1.SelectedRows[0].Cells[5].Value = (Convert.ToDouble(textBox_ilosc.Text) * Convert.ToDouble(textBox_Netto.Text));
 
-
         }
-
         private void button_Usun_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
         }
 
-        /* EMPTY */ private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        //----------------------------------------------------------------------------------------------------------------------------------------------------------
+        //Ukrywa wszystkie panele pokazujac strone glowna - dostawa             -- KUBY STRONA GLOWNA
+        private void Btn_Dostawa_Click(object sender, EventArgs e)
         {
-
+            UkryjPanele();
         }
 
+        //Przycisk magazyn otwiera panel i zamyka wszytskie pozostałe
         private void Btn_Magazyn_Click(object sender, EventArgs e)
         {
             UkryjPanele();
             listPanel[0].BringToFront();  
         }
 
+        //Przycisk zamowienie otwiera panel i zamyka wszytskie pozostałe
         private void Btn_Zamowienia_Click(object sender, EventArgs e)
         {
             UkryjPanele();
             listPanel[1].BringToFront();
         }
 
+        //Funkcja odpowiadająca za ukrycie wszystkich dostępnych paneli
         public void UkryjPanele()
         {
             for (int i = 0; i < listPanel.Count(); i++)
             {
                 listPanel[i].SendToBack();
-            }
-            
+            }      
         }
 
-        private void Btn_Dostawa_Click(object sender, EventArgs e)
-        {
-            UkryjPanele();
-        }
-
+        //Przycisk dostawcy pokazuje panel dostawcow ukrywajac reszte paneli
         private void Btn_Dostawcy_Click(object sender, EventArgs e)
         {
             UkryjPanele();
             listPanel[2].BringToFront();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        //Wróc na strone glowna przyskiem back - poukrywaj panele
+        private void Btn_Back_Click(object sender, EventArgs e)
         {
             UkryjPanele();
         }
- 
+
+        //Zaimportowanie wczesniej utworzonej listy dostawców z pliku xml
         private void Btn_Dostawca_Import_Click(object sender, EventArgs e)
         {
             FileStream fs = new FileStream("..\\..\\Pliki XML\\ListaDostawcow.xml", FileMode.Open, FileAccess.Read);
@@ -205,38 +193,49 @@ namespace MagazynAplikacja
             fs.Close();
         }
 
+        //Wyexportowanie zapisanej tabeli dostawców do pliku xml
         private void Btn_Dostawca_Export_Click(object sender, EventArgs e)
         {
             FileStream fs = new FileStream("..\\..\\Pliki XML\\ListaDostawcowEXPORT.xml", FileMode.Create, FileAccess.Write);
             xs.Serialize(fs, listDostawcy);                              
             fs.Close();                                                
-        } 
+        }
 
+        //Wysiwtlenie nowego okna umożliwiającego wprowadzenie nowego dostawcę
         private void Btn_Dostawca_New_Click(object sender, EventArgs e)
         {
             Form_Nowy_Dostawca Nowy_Dostawca = new Form_Nowy_Dostawca();
             Nowy_Dostawca.ShowDialog();
-        }
+        }      
 
-
+        // Zamknięcie panelu produktów przy wciśnieciu przycisku back
         private void Btn_Produkty_Back_Click(object sender, EventArgs e)
         {
             UkryjPanele();
             listPanel[0].BringToFront();
-        }
+        }    
 
+        // Pokazanie panelu produktów po kliknięciu przycisk produkty
         private void Btn_Produkty_Click(object sender, EventArgs e)
         {
             listPanel[3].BringToFront();
+        }    
+        
+        // Przekazanie wartości klikniętego elementu w tabeli do okna edycjii
+        private void Btn_Dostawca_Edit_Click(object sender, EventArgs e)
+        {
+            Form_Edycja_Dostawcy Edycja_Dostawca = new Form_Edycja_Dostawcy();
+
+            Edycja_Dostawca.Label_ID.Text = dataGridView2.SelectedRows[0].Cells[0].Value.ToString();
+            Edycja_Dostawca.TextBox_Firma.Text = dataGridView2.SelectedRows[0].Cells[1].Value.ToString();
+            Edycja_Dostawca.TextBox_Nazwa.Text = dataGridView2.SelectedRows[0].Cells[2].Value.ToString();
+            Edycja_Dostawca.TextBox_NIP.Text = dataGridView2.SelectedRows[0].Cells[3].Value.ToString();
+            Edycja_Dostawca.TextBox_Adres.Text = dataGridView2.SelectedRows[0].Cells[4].Value.ToString();
+            Edycja_Dostawca.TextBox_Miejscowosc.Text = dataGridView2.SelectedRows[0].Cells[5].Value.ToString();
+            Edycja_Dostawca.TextBox_Kod.Text = dataGridView2.SelectedRows[0].Cells[6].Value.ToString();
+
+            Edycja_Dostawca.ShowDialog();    
         }
 
-        /* ~ W.I.P ~ */ private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            dataGridView2.SelectedRows[0].Cells[0].Value.ToString();      //pobranie z listy elementow dostawcy o podanym id
-        }   
-        /* ~ W.I.P ~ */private void Btn_Dostawca_Edit_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

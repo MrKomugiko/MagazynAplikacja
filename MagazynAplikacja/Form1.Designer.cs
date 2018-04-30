@@ -69,7 +69,7 @@
             this.Btn_Produkty = new System.Windows.Forms.Button();
             this.panel_Dostawcy_Main = new System.Windows.Forms.Panel();
             this.Btn_Dostawca_Export = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.Btn_Back = new System.Windows.Forms.Button();
             this.Btn_Dostawca_Import = new System.Windows.Forms.Button();
             this.Btn_Dostawca_Edit = new System.Windows.Forms.Button();
             this.Btn_Dostawca_New = new System.Windows.Forms.Button();
@@ -128,7 +128,6 @@
             this.Btn_loadXML.TabIndex = 0;
             this.Btn_loadXML.Text = "Załaduj Dostawców z XML";
             this.Btn_loadXML.UseVisualStyleBackColor = true;
-            this.Btn_loadXML.Click += new System.EventHandler(this.Btn_loadXML_Click);
             // 
             // label1
             // 
@@ -139,7 +138,6 @@
             this.label1.Size = new System.Drawing.Size(121, 29);
             this.label1.TabIndex = 3;
             this.label1.Text = "Produkty";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -237,7 +235,6 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1016, 337);
             this.dataGridView1.TabIndex = 17;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseDoubleClick);
             // 
             // Nazwa
@@ -484,7 +481,7 @@
             // 
             this.panel_Dostawcy_Main.BackColor = System.Drawing.SystemColors.Control;
             this.panel_Dostawcy_Main.Controls.Add(this.Btn_Dostawca_Export);
-            this.panel_Dostawcy_Main.Controls.Add(this.button7);
+            this.panel_Dostawcy_Main.Controls.Add(this.Btn_Back);
             this.panel_Dostawcy_Main.Controls.Add(this.Btn_Dostawca_Import);
             this.panel_Dostawcy_Main.Controls.Add(this.Btn_Dostawca_Edit);
             this.panel_Dostawcy_Main.Controls.Add(this.Btn_Dostawca_New);
@@ -510,18 +507,18 @@
             this.Btn_Dostawca_Export.UseVisualStyleBackColor = false;
             this.Btn_Dostawca_Export.Click += new System.EventHandler(this.Btn_Dostawca_Export_Click);
             // 
-            // button7
+            // Btn_Back
             // 
-            this.button7.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button7.Location = new System.Drawing.Point(859, 645);
-            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(147, 50);
-            this.button7.TabIndex = 44;
-            this.button7.Text = "BACK";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.Btn_Back.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Btn_Back.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Btn_Back.Location = new System.Drawing.Point(859, 645);
+            this.Btn_Back.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Btn_Back.Name = "Btn_Back";
+            this.Btn_Back.Size = new System.Drawing.Size(147, 50);
+            this.Btn_Back.TabIndex = 44;
+            this.Btn_Back.Text = "BACK";
+            this.Btn_Back.UseVisualStyleBackColor = false;
+            this.Btn_Back.Click += new System.EventHandler(this.Btn_Back_Click);
             // 
             // Btn_Dostawca_Import
             // 
@@ -539,7 +536,6 @@
             // Btn_Dostawca_Edit
             // 
             this.Btn_Dostawca_Edit.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.Btn_Dostawca_Edit.Enabled = false;
             this.Btn_Dostawca_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Btn_Dostawca_Edit.Location = new System.Drawing.Point(166, 17);
             this.Btn_Dostawca_Edit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -600,7 +596,6 @@
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(993, 560);
             this.dataGridView2.TabIndex = 46;
-            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
             // textBox_ilosc
             // 
@@ -963,8 +958,7 @@
         private System.Windows.Forms.Button Btn_Dostawca_Edit;
         private System.Windows.Forms.Button Btn_Dostawca_New;
         private System.Windows.Forms.Label Label_Dostawcy;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button Btn_Back;
         private System.Windows.Forms.Button Btn_Dostawca_Export;
         private System.Windows.Forms.BindingSource dostawcyBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
@@ -1002,6 +996,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn miejscowoscDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn kodDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn grupaDataGridViewTextBoxColumn1;
+        protected internal System.Windows.Forms.DataGridView dataGridView2;
     }
 }
 
