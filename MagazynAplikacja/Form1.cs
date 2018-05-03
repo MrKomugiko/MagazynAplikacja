@@ -16,7 +16,7 @@ namespace MagazynAplikacja
     public partial class Form1 : Form
     {
         List<Panel> listPanel = new List<Panel>();
-        XmlSerializer xs;
+        public XmlSerializer xs;
         List<Dostawcy> listDostawcy;
 
         //Przypisanie własności listy do listyDostawców oraz utworzenie odwołania do XmlSerializer'a
@@ -31,12 +31,14 @@ namespace MagazynAplikacja
         //PRzy starcie apki załaduje do listy wszystkie mozliwe panele w celu łatwiejszej organizacji 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            Btn_Dostawca_Import.PerformClick();
+
             listPanel.Add(panel_Magazyn);           // 0
             listPanel.Add(panel_Zamowienia);        // 1
             listPanel.Add(panel_Dostawcy_Main);     // 2
             listPanel.Add(panel_Produkty_Main);     // 3
             UkryjPanele();
+
         }
 
         private void button_Dodaj_Click(object sender, EventArgs e)
@@ -234,7 +236,8 @@ namespace MagazynAplikacja
             Edycja_Dostawca.TextBox_Miejscowosc.Text = dataGridView2.SelectedRows[0].Cells[5].Value.ToString();
             Edycja_Dostawca.TextBox_Kod.Text = dataGridView2.SelectedRows[0].Cells[6].Value.ToString();
 
-            Edycja_Dostawca.ShowDialog();    
+            Edycja_Dostawca.ShowDialog();
+            Btn_Dostawca_Import.PerformClick();
         }
 
     }

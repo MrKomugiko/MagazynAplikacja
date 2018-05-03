@@ -12,52 +12,92 @@
   </Dostawcy>
   <Dostawcy>
     <id>1000</id>
-    <Kontrahent>Krzak Sp.z o.o.</Kontrahent>
-    <Nazwa_skrocona>Krzak</Nazwa_skrocona>
-    <NIP>1001001010</NIP>
-    <Adress>las</Adress>
-    <Miejscowosc>gdańsk</Miejscowosc>
-    <Kod>80-20</Kod>
+    <Kontrahent>AUTO TEX Sp. z .o.o.</Kontrahent>
+    <Nazwa_skrocona>AUTOTEX</Nazwa_skrocona>
+    <NIP>5870007372</NIP>
+    <Adress>Hallera</Adress>
+    <Miejscowosc>Gdansk</Miejscowosc>
+    <Kod>085000</Kod>
     <Grupa>0</Grupa>
   </Dostawcy>
   <Dostawcy>
     <id>1001</id>
-    <Kontrahent>fbfbf</Kontrahent>
-    <Nazwa_skrocona>bfdbd</Nazwa_skrocona>
-    <NIP>54335</NIP>
-    <Adress>gfeg</Adress>
-    <Miejscowosc>ggeg</Miejscowosc>
-    <Kod>4335</Kod>
+    <Kontrahent>KOPYTKO - AKTUALIZACJA</Kontrahent>
+    <Nazwa_skrocona>nazwa skrocona</Nazwa_skrocona>
+    <NIP>0</NIP>
+    <Adress>Gdansk adres</Adress>
+    <Miejscowosc>Gdansk</Miejscowosc>
+    <Kod>085000</Kod>
     <Grupa>0</Grupa>
   </Dostawcy>
   <Dostawcy>
     <id>1002</id>
-    <Kontrahent>fdgfd</Kontrahent>
-    <Nazwa_skrocona>gfdgfd</Nazwa_skrocona>
-    <NIP>24324</NIP>
-    <Adress>dsfsd</Adress>
-    <Miejscowosc>fdsfds</Miejscowosc>
-    <Kod>34324</Kod>
+    <Kontrahent>KOPYTKO - AKTUALIZACJA</Kontrahent>
+    <Nazwa_skrocona>nazwa skrocona</Nazwa_skrocona>
+    <NIP>0</NIP>
+    <Adress>Gdansk adres</Adress>
+    <Miejscowosc>Gdansk</Miejscowosc>
+    <Kod>085000</Kod>
     <Grupa>0</Grupa>
   </Dostawcy>
   <Dostawcy>
     <id>1003</id>
-    <Kontrahent>11111111</Kontrahent>
-    <Nazwa_skrocona>gfdgfd</Nazwa_skrocona>
-    <NIP>24324</NIP>
-    <Adress>dsfsd</Adress>
-    <Miejscowosc>fdsfds</Miejscowosc>
-    <Kod>34324</Kod>
+    <Kontrahent>KOPYTKO - AKTUALIZACJA</Kontrahent>
+    <Nazwa_skrocona>nazwa skrocona</Nazwa_skrocona>
+    <NIP>0</NIP>
+    <Adress>Gdansk adres</Adress>
+    <Miejscowosc>Gdansk</Miejscowosc>
+    <Kod>085000</Kod>
     <Grupa>0</Grupa>
   </Dostawcy>
   <Dostawcy>
     <id>1004</id>
-    <Kontrahent>222</Kontrahent>
-    <Nazwa_skrocona>gfdgfd</Nazwa_skrocona>
-    <NIP>24324</NIP>
-    <Adress>dsfsd</Adress>
-    <Miejscowosc>fdsfds</Miejscowosc>
-    <Kod>34324</Kod>
+    <Kontrahent>KOPYTKO - AKTUALIZACJA</Kontrahent>
+    <Nazwa_skrocona>nazwa skrocona</Nazwa_skrocona>
+    <NIP>0</NIP>
+    <Adress>Gdansk adres</Adress>
+    <Miejscowosc>Gdansk</Miejscowosc>
+    <Kod>085000</Kod>
+    <Grupa>0</Grupa>
+  </Dostawcy>
+  <Dostawcy>
+    <id>1005</id>
+    <Kontrahent>KOPYTKO - AKTUALIZACJA</Kontrahent>
+    <Nazwa_skrocona>nazwa skrocona</Nazwa_skrocona>
+    <NIP>0</NIP>
+    <Adress>Gdansk adres</Adress>
+    <Miejscowosc>Gdansk</Miejscowosc>
+    <Kod>085000</Kod>
+    <Grupa>0</Grupa>
+  </Dostawcy>
+  <Dostawcy>
+    <id>1006</id>
+    <Kontrahent>KOPYTKO - AKTUALIZACJA</Kontrahent>
+    <Nazwa_skrocona>nazwa skrocona</Nazwa_skrocona>
+    <NIP>0</NIP>
+    <Adress>Gdansk adres</Adress>
+    <Miejscowosc>Gdansk</Miejscowosc>
+    <Kod>085000</Kod>
+    <Grupa>0</Grupa>
+  </Dostawcy>
+  <Dostawcy>
+    <id>1007</id>
+    <Kontrahent>KOPYTKO - AKTUALIZACJA</Kontrahent>
+    <Nazwa_skrocona>nazwa skrocona</Nazwa_skrocona>
+    <NIP>0</NIP>
+    <Adress>Gdansk adres</Adress>
+    <Miejscowosc>Gdansk</Miejscowosc>
+    <Kod>085000</Kod>
+    <Grupa>0</Grupa>
+  </Dostawcy>
+  <Dostawcy>
+    <id>1008</id>
+    <Kontrahent>KOPYTKO - AKTUALIZACJA</Kontrahent>
+    <Nazwa_skrocona>nazwa skrocona</Nazwa_skrocona>
+    <NIP>0</NIP>
+    <Adress>Gdansk adres</Adress>
+    <Miejscowosc>Gdansk</Miejscowosc>
+    <Kod>085000</Kod>
     <Grupa>0</Grupa>
   </Dostawcy>
 </ArrayOfDostawcy>

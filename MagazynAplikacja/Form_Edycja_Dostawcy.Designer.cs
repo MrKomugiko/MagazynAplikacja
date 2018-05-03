@@ -56,6 +56,7 @@
             this.Btn_Zatwierdz_Edytuj.TabIndex = 53;
             this.Btn_Zatwierdz_Edytuj.Text = "EDYTUJ / ZAMKNIJ";
             this.Btn_Zatwierdz_Edytuj.UseVisualStyleBackColor = true;
+            this.Btn_Zatwierdz_Edytuj.Click += new System.EventHandler(this.Btn_Zatwierdz_Edytuj_Click);
             // 
             // TextBox_Grupa
             // 
