@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace MagazynAplikacja
 {
-    class Produkty
+    public class Produkty
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
         public string Nazwa { get; set; }
         public string Opis { get; set; }
         public int EAN { get; set; }
@@ -17,7 +17,7 @@ namespace MagazynAplikacja
         public float Wartosc_VAT { get; set; }
         public float Cena_Brutto { get; set; }
         public int Dostawca_ID { get; set; }
-        public int Grupa { get; set; }
+        public string Grupa { get; set; }
 
     }
 }

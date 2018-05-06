@@ -75,15 +75,6 @@
             this.Btn_Dostawca_New = new System.Windows.Forms.Button();
             this.Label_Dostawcy = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kontrahentDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nazwaskroconaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nIPDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adressDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.miejscowoscDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kodDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grupaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dostawcyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox_ilosc = new System.Windows.Forms.TextBox();
             this.textBox_VAT = new System.Windows.Forms.TextBox();
             this.textBox2_Nazwa = new System.Windows.Forms.TextBox();
@@ -98,22 +89,35 @@
             this.Btn_Produkty_New = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kontrahentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nazwaskroconaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nIPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.miejscowoscDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nazwaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.opisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eANDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cenaNettoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vATDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.wartoscVATDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cenaBruttoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dostawcaIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grupaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.produktyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kontrahentDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nazwaskroconaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nIPDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adressDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.miejscowoscDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kodDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grupaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dostawcyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel_Magazyn.SuspendLayout();
             this.panel_Zamowienia.SuspendLayout();
             this.panel_Dostawcy_Main.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dostawcyBindingSource)).BeginInit();
             this.panel_Dostawa.SuspendLayout();
             this.panel_Produkty_Main.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.produktyBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dostawcyBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Btn_loadXML
@@ -473,7 +477,7 @@
             this.Btn_Produkty.Name = "Btn_Produkty";
             this.Btn_Produkty.Size = new System.Drawing.Size(147, 50);
             this.Btn_Produkty.TabIndex = 38;
-            this.Btn_Produkty.Text = "Produkty";
+            this.Btn_Produkty.Text = "Produkty [W.I.P]";
             this.Btn_Produkty.UseVisualStyleBackColor = true;
             this.Btn_Produkty.Click += new System.EventHandler(this.Btn_Produkty_Click);
             // 
@@ -572,7 +576,7 @@
             // 
             this.dataGridView2.AllowUserToOrderColumns = true;
             this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -596,58 +600,6 @@
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(993, 560);
             this.dataGridView2.TabIndex = 46;
-            // 
-            // idDataGridViewTextBoxColumn1
-            // 
-            this.idDataGridViewTextBoxColumn1.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn1.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
-            // 
-            // kontrahentDataGridViewTextBoxColumn1
-            // 
-            this.kontrahentDataGridViewTextBoxColumn1.DataPropertyName = "Kontrahent";
-            this.kontrahentDataGridViewTextBoxColumn1.HeaderText = "Kontrahent";
-            this.kontrahentDataGridViewTextBoxColumn1.Name = "kontrahentDataGridViewTextBoxColumn1";
-            // 
-            // nazwaskroconaDataGridViewTextBoxColumn1
-            // 
-            this.nazwaskroconaDataGridViewTextBoxColumn1.DataPropertyName = "Nazwa_skrocona";
-            this.nazwaskroconaDataGridViewTextBoxColumn1.HeaderText = "Nazwa_skrocona";
-            this.nazwaskroconaDataGridViewTextBoxColumn1.Name = "nazwaskroconaDataGridViewTextBoxColumn1";
-            // 
-            // nIPDataGridViewTextBoxColumn1
-            // 
-            this.nIPDataGridViewTextBoxColumn1.DataPropertyName = "NIP";
-            this.nIPDataGridViewTextBoxColumn1.HeaderText = "NIP";
-            this.nIPDataGridViewTextBoxColumn1.Name = "nIPDataGridViewTextBoxColumn1";
-            // 
-            // adressDataGridViewTextBoxColumn1
-            // 
-            this.adressDataGridViewTextBoxColumn1.DataPropertyName = "Adress";
-            this.adressDataGridViewTextBoxColumn1.HeaderText = "Adress";
-            this.adressDataGridViewTextBoxColumn1.Name = "adressDataGridViewTextBoxColumn1";
-            // 
-            // miejscowoscDataGridViewTextBoxColumn1
-            // 
-            this.miejscowoscDataGridViewTextBoxColumn1.DataPropertyName = "Miejscowosc";
-            this.miejscowoscDataGridViewTextBoxColumn1.HeaderText = "Miejscowosc";
-            this.miejscowoscDataGridViewTextBoxColumn1.Name = "miejscowoscDataGridViewTextBoxColumn1";
-            // 
-            // kodDataGridViewTextBoxColumn1
-            // 
-            this.kodDataGridViewTextBoxColumn1.DataPropertyName = "Kod";
-            this.kodDataGridViewTextBoxColumn1.HeaderText = "Kod";
-            this.kodDataGridViewTextBoxColumn1.Name = "kodDataGridViewTextBoxColumn1";
-            // 
-            // grupaDataGridViewTextBoxColumn1
-            // 
-            this.grupaDataGridViewTextBoxColumn1.DataPropertyName = "Grupa";
-            this.grupaDataGridViewTextBoxColumn1.HeaderText = "Grupa";
-            this.grupaDataGridViewTextBoxColumn1.Name = "grupaDataGridViewTextBoxColumn1";
-            // 
-            // dostawcyBindingSource
-            // 
-            this.dostawcyBindingSource.DataSource = typeof(MagazynAplikacja.Dostawcy);
             // 
             // textBox_ilosc
             // 
@@ -746,6 +698,7 @@
             // Btn_Produkty_Export
             // 
             this.Btn_Produkty_Export.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Btn_Produkty_Export.Enabled = false;
             this.Btn_Produkty_Export.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Btn_Produkty_Export.Location = new System.Drawing.Point(859, 17);
             this.Btn_Produkty_Export.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -779,6 +732,7 @@
             this.Btn_Produkty_Import.TabIndex = 40;
             this.Btn_Produkty_Import.Text = "IMPORT";
             this.Btn_Produkty_Import.UseVisualStyleBackColor = false;
+            this.Btn_Produkty_Import.Click += new System.EventHandler(this.Btn_Produkty_Import_Click);
             // 
             // Btn_Produkty_Edit
             // 
@@ -796,6 +750,7 @@
             // Btn_Produkty_New
             // 
             this.Btn_Produkty_New.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Btn_Produkty_New.Enabled = false;
             this.Btn_Produkty_New.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Btn_Produkty_New.Location = new System.Drawing.Point(13, 17);
             this.Btn_Produkty_New.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -809,20 +764,22 @@
             // 
             this.dataGridView3.AllowUserToOrderColumns = true;
             this.dataGridView3.AutoGenerateColumns = false;
-            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
-            this.kontrahentDataGridViewTextBoxColumn,
-            this.nazwaskroconaDataGridViewTextBoxColumn,
-            this.nIPDataGridViewTextBoxColumn,
-            this.adressDataGridViewTextBoxColumn,
-            this.miejscowoscDataGridViewTextBoxColumn,
-            this.kodDataGridViewTextBoxColumn,
+            this.nazwaDataGridViewTextBoxColumn,
+            this.opisDataGridViewTextBoxColumn,
+            this.eANDataGridViewTextBoxColumn,
+            this.cenaNettoDataGridViewTextBoxColumn,
+            this.vATDataGridViewTextBoxColumn,
+            this.wartoscVATDataGridViewTextBoxColumn,
+            this.cenaBruttoDataGridViewTextBoxColumn,
+            this.dostawcaIDDataGridViewTextBoxColumn,
             this.grupaDataGridViewTextBoxColumn});
-            this.dataGridView3.DataSource = this.dostawcyBindingSource;
+            this.dataGridView3.DataSource = this.produktyBindingSource;
             this.dataGridView3.EnableHeadersVisualStyles = false;
             this.dataGridView3.Location = new System.Drawing.Point(13, 78);
             this.dataGridView3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -835,51 +792,137 @@
             // 
             // idDataGridViewTextBoxColumn
             // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Width = 64;
             // 
-            // kontrahentDataGridViewTextBoxColumn
+            // nazwaDataGridViewTextBoxColumn
             // 
-            this.kontrahentDataGridViewTextBoxColumn.DataPropertyName = "Kontrahent";
-            this.kontrahentDataGridViewTextBoxColumn.HeaderText = "Kontrahent";
-            this.kontrahentDataGridViewTextBoxColumn.Name = "kontrahentDataGridViewTextBoxColumn";
+            this.nazwaDataGridViewTextBoxColumn.DataPropertyName = "Nazwa";
+            this.nazwaDataGridViewTextBoxColumn.HeaderText = "Nazwa";
+            this.nazwaDataGridViewTextBoxColumn.Name = "nazwaDataGridViewTextBoxColumn";
+            this.nazwaDataGridViewTextBoxColumn.Width = 124;
             // 
-            // nazwaskroconaDataGridViewTextBoxColumn
+            // opisDataGridViewTextBoxColumn
             // 
-            this.nazwaskroconaDataGridViewTextBoxColumn.DataPropertyName = "Nazwa_skrocona";
-            this.nazwaskroconaDataGridViewTextBoxColumn.HeaderText = "Nazwa_skrocona";
-            this.nazwaskroconaDataGridViewTextBoxColumn.Name = "nazwaskroconaDataGridViewTextBoxColumn";
+            this.opisDataGridViewTextBoxColumn.DataPropertyName = "Opis";
+            this.opisDataGridViewTextBoxColumn.HeaderText = "Opis";
+            this.opisDataGridViewTextBoxColumn.Name = "opisDataGridViewTextBoxColumn";
+            this.opisDataGridViewTextBoxColumn.Width = 98;
             // 
-            // nIPDataGridViewTextBoxColumn
+            // eANDataGridViewTextBoxColumn
             // 
-            this.nIPDataGridViewTextBoxColumn.DataPropertyName = "NIP";
-            this.nIPDataGridViewTextBoxColumn.HeaderText = "NIP";
-            this.nIPDataGridViewTextBoxColumn.Name = "nIPDataGridViewTextBoxColumn";
+            this.eANDataGridViewTextBoxColumn.DataPropertyName = "EAN";
+            this.eANDataGridViewTextBoxColumn.HeaderText = "EAN";
+            this.eANDataGridViewTextBoxColumn.Name = "eANDataGridViewTextBoxColumn";
+            this.eANDataGridViewTextBoxColumn.Width = 97;
             // 
-            // adressDataGridViewTextBoxColumn
+            // cenaNettoDataGridViewTextBoxColumn
             // 
-            this.adressDataGridViewTextBoxColumn.DataPropertyName = "Adress";
-            this.adressDataGridViewTextBoxColumn.HeaderText = "Adress";
-            this.adressDataGridViewTextBoxColumn.Name = "adressDataGridViewTextBoxColumn";
+            this.cenaNettoDataGridViewTextBoxColumn.DataPropertyName = "Cena_Netto";
+            this.cenaNettoDataGridViewTextBoxColumn.HeaderText = "Cena_Netto";
+            this.cenaNettoDataGridViewTextBoxColumn.Name = "cenaNettoDataGridViewTextBoxColumn";
+            this.cenaNettoDataGridViewTextBoxColumn.Width = 186;
             // 
-            // miejscowoscDataGridViewTextBoxColumn
+            // vATDataGridViewTextBoxColumn
             // 
-            this.miejscowoscDataGridViewTextBoxColumn.DataPropertyName = "Miejscowosc";
-            this.miejscowoscDataGridViewTextBoxColumn.HeaderText = "Miejscowosc";
-            this.miejscowoscDataGridViewTextBoxColumn.Name = "miejscowoscDataGridViewTextBoxColumn";
+            this.vATDataGridViewTextBoxColumn.DataPropertyName = "VAT";
+            this.vATDataGridViewTextBoxColumn.HeaderText = "VAT";
+            this.vATDataGridViewTextBoxColumn.Name = "vATDataGridViewTextBoxColumn";
+            this.vATDataGridViewTextBoxColumn.Width = 94;
             // 
-            // kodDataGridViewTextBoxColumn
+            // wartoscVATDataGridViewTextBoxColumn
             // 
-            this.kodDataGridViewTextBoxColumn.DataPropertyName = "Kod";
-            this.kodDataGridViewTextBoxColumn.HeaderText = "Kod";
-            this.kodDataGridViewTextBoxColumn.Name = "kodDataGridViewTextBoxColumn";
+            this.wartoscVATDataGridViewTextBoxColumn.DataPropertyName = "Wartosc_VAT";
+            this.wartoscVATDataGridViewTextBoxColumn.HeaderText = "Wartosc_VAT";
+            this.wartoscVATDataGridViewTextBoxColumn.Name = "wartoscVATDataGridViewTextBoxColumn";
+            this.wartoscVATDataGridViewTextBoxColumn.Width = 209;
+            // 
+            // cenaBruttoDataGridViewTextBoxColumn
+            // 
+            this.cenaBruttoDataGridViewTextBoxColumn.DataPropertyName = "Cena_Brutto";
+            this.cenaBruttoDataGridViewTextBoxColumn.HeaderText = "Cena_Brutto";
+            this.cenaBruttoDataGridViewTextBoxColumn.Name = "cenaBruttoDataGridViewTextBoxColumn";
+            this.cenaBruttoDataGridViewTextBoxColumn.Width = 194;
+            // 
+            // dostawcaIDDataGridViewTextBoxColumn
+            // 
+            this.dostawcaIDDataGridViewTextBoxColumn.DataPropertyName = "Dostawca_ID";
+            this.dostawcaIDDataGridViewTextBoxColumn.HeaderText = "Dostawca_ID";
+            this.dostawcaIDDataGridViewTextBoxColumn.Name = "dostawcaIDDataGridViewTextBoxColumn";
+            this.dostawcaIDDataGridViewTextBoxColumn.Width = 202;
             // 
             // grupaDataGridViewTextBoxColumn
             // 
             this.grupaDataGridViewTextBoxColumn.DataPropertyName = "Grupa";
             this.grupaDataGridViewTextBoxColumn.HeaderText = "Grupa";
             this.grupaDataGridViewTextBoxColumn.Name = "grupaDataGridViewTextBoxColumn";
+            this.grupaDataGridViewTextBoxColumn.Width = 116;
+            // 
+            // produktyBindingSource
+            // 
+            this.produktyBindingSource.DataSource = typeof(MagazynAplikacja.Produkty);
+            // 
+            // idDataGridViewTextBoxColumn1
+            // 
+            this.idDataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn1.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+            this.idDataGridViewTextBoxColumn1.Width = 64;
+            // 
+            // kontrahentDataGridViewTextBoxColumn1
+            // 
+            this.kontrahentDataGridViewTextBoxColumn1.DataPropertyName = "Kontrahent";
+            this.kontrahentDataGridViewTextBoxColumn1.HeaderText = "Kontrahent";
+            this.kontrahentDataGridViewTextBoxColumn1.Name = "kontrahentDataGridViewTextBoxColumn1";
+            this.kontrahentDataGridViewTextBoxColumn1.Width = 175;
+            // 
+            // nazwaskroconaDataGridViewTextBoxColumn1
+            // 
+            this.nazwaskroconaDataGridViewTextBoxColumn1.DataPropertyName = "Nazwa_skrocona";
+            this.nazwaskroconaDataGridViewTextBoxColumn1.HeaderText = "Nazwa_skrocona";
+            this.nazwaskroconaDataGridViewTextBoxColumn1.Name = "nazwaskroconaDataGridViewTextBoxColumn1";
+            this.nazwaskroconaDataGridViewTextBoxColumn1.Width = 250;
+            // 
+            // nIPDataGridViewTextBoxColumn1
+            // 
+            this.nIPDataGridViewTextBoxColumn1.DataPropertyName = "NIP";
+            this.nIPDataGridViewTextBoxColumn1.HeaderText = "NIP";
+            this.nIPDataGridViewTextBoxColumn1.Name = "nIPDataGridViewTextBoxColumn1";
+            this.nIPDataGridViewTextBoxColumn1.Width = 86;
+            // 
+            // adressDataGridViewTextBoxColumn1
+            // 
+            this.adressDataGridViewTextBoxColumn1.DataPropertyName = "Adress";
+            this.adressDataGridViewTextBoxColumn1.HeaderText = "Adress";
+            this.adressDataGridViewTextBoxColumn1.Name = "adressDataGridViewTextBoxColumn1";
+            this.adressDataGridViewTextBoxColumn1.Width = 127;
+            // 
+            // miejscowoscDataGridViewTextBoxColumn1
+            // 
+            this.miejscowoscDataGridViewTextBoxColumn1.DataPropertyName = "Miejscowosc";
+            this.miejscowoscDataGridViewTextBoxColumn1.HeaderText = "Miejscowosc";
+            this.miejscowoscDataGridViewTextBoxColumn1.Name = "miejscowoscDataGridViewTextBoxColumn1";
+            this.miejscowoscDataGridViewTextBoxColumn1.Width = 198;
+            // 
+            // kodDataGridViewTextBoxColumn1
+            // 
+            this.kodDataGridViewTextBoxColumn1.DataPropertyName = "Kod";
+            this.kodDataGridViewTextBoxColumn1.HeaderText = "Kod";
+            this.kodDataGridViewTextBoxColumn1.Name = "kodDataGridViewTextBoxColumn1";
+            this.kodDataGridViewTextBoxColumn1.Width = 90;
+            // 
+            // grupaDataGridViewTextBoxColumn1
+            // 
+            this.grupaDataGridViewTextBoxColumn1.DataPropertyName = "Grupa";
+            this.grupaDataGridViewTextBoxColumn1.HeaderText = "Grupa[W.I.P]";
+            this.grupaDataGridViewTextBoxColumn1.Name = "grupaDataGridViewTextBoxColumn1";
+            this.grupaDataGridViewTextBoxColumn1.Width = 198;
+            // 
+            // dostawcyBindingSource
+            // 
+            this.dostawcyBindingSource.DataSource = typeof(MagazynAplikacja.Dostawcy);
             // 
             // Form1
             // 
@@ -892,8 +935,8 @@
             this.Controls.Add(this.Btn_Zamowienia);
             this.Controls.Add(this.Btn_loadXML);
             this.Controls.Add(this.Btn_Dostawa);
-            this.Controls.Add(this.panel_Dostawcy_Main);
             this.Controls.Add(this.panel_Produkty_Main);
+            this.Controls.Add(this.panel_Dostawcy_Main);
             this.Controls.Add(this.panel_Dostawa);
             this.Controls.Add(this.panel_Zamowienia);
             this.Controls.Add(this.panel_Magazyn);
@@ -909,12 +952,13 @@
             this.panel_Dostawcy_Main.ResumeLayout(false);
             this.panel_Dostawcy_Main.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dostawcyBindingSource)).EndInit();
             this.panel_Dostawa.ResumeLayout(false);
             this.panel_Dostawa.PerformLayout();
             this.panel_Produkty_Main.ResumeLayout(false);
             this.panel_Produkty_Main.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.produktyBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dostawcyBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -960,14 +1004,6 @@
         private System.Windows.Forms.Button Btn_Back;
         private System.Windows.Forms.Button Btn_Dostawca_Export;
         private System.Windows.Forms.BindingSource dostawcyBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kontrahentDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nazwaskroconaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nIPDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn adressDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn miejscowoscDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kodDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn grupaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nazwa;
         private System.Windows.Forms.DataGridViewTextBoxColumn Miasto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Adres;
@@ -985,8 +1021,9 @@
         private System.Windows.Forms.Button Btn_Produkty_Import;
         private System.Windows.Forms.Button Btn_Produkty_Edit;
         private System.Windows.Forms.Button Btn_Produkty_New;
-        private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Label Label_Podukty;
+        protected internal System.Windows.Forms.DataGridView dataGridView2;
+        protected internal System.Windows.Forms.Button Btn_Dostawca_Import;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn kontrahentDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn nazwaskroconaDataGridViewTextBoxColumn1;
@@ -995,8 +1032,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn miejscowoscDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn kodDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn grupaDataGridViewTextBoxColumn1;
-        protected internal System.Windows.Forms.DataGridView dataGridView2;
-        protected internal System.Windows.Forms.Button Btn_Dostawca_Import;
+        private System.Windows.Forms.BindingSource produktyBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nazwaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn opisDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eANDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cenaNettoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vATDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn wartoscVATDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cenaBruttoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dostawcaIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn grupaDataGridViewTextBoxColumn;
+        protected internal System.Windows.Forms.DataGridView dataGridView3;
     }
 }
 

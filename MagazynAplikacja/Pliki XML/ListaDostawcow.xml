@@ -1,18 +1,8 @@
 <?xml version="1.0"?>
 <ArrayOfDostawcy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Dostawcy>
-    <id>0</id>
-    <Kontrahent>0</Kontrahent>
-    <Nazwa_skrocona>0</Nazwa_skrocona>
-    <NIP>0</NIP>
-    <Adress>0</Adress>
-    <Miejscowosc>0</Miejscowosc>
-    <Kod>0</Kod>
-    <Grupa>0</Grupa>
-  </Dostawcy>
-  <Dostawcy>
     <id>1000</id>
-    <Kontrahent>AUTO TEX Sp. z .o.o.</Kontrahent>
+    <Kontrahent>AUTO1</Kontrahent>
     <Nazwa_skrocona>AUTOTEX</Nazwa_skrocona>
     <NIP>5870007372</NIP>
     <Adress>Hallera</Adress>
@@ -22,18 +12,18 @@
   </Dostawcy>
   <Dostawcy>
     <id>1001</id>
-    <Kontrahent>KOPYTKO - AKTUALIZACJA</Kontrahent>
-    <Nazwa_skrocona>nazwa skrocona</Nazwa_skrocona>
-    <NIP>0</NIP>
-    <Adress>Gdansk adres</Adress>
+    <Kontrahent>jijiji</Kontrahent>
+    <Nazwa_skrocona>FIRMA 1</Nazwa_skrocona>
+    <NIP>5870007372</NIP>
+    <Adress>Hallera</Adress>
     <Miejscowosc>Gdansk</Miejscowosc>
     <Kod>085000</Kod>
     <Grupa>0</Grupa>
   </Dostawcy>
   <Dostawcy>
     <id>1002</id>
-    <Kontrahent>KOPYTKO - AKTUALIZACJA</Kontrahent>
-    <Nazwa_skrocona>nazwa skrocona</Nazwa_skrocona>
+    <Kontrahent>FIRMA fdf</Kontrahent>
+    <Nazwa_skrocona>sddasd</Nazwa_skrocona>
     <NIP>0</NIP>
     <Adress>Gdansk adres</Adress>
     <Miejscowosc>Gdansk</Miejscowosc>
@@ -92,7 +82,7 @@
   </Dostawcy>
   <Dostawcy>
     <id>1008</id>
-    <Kontrahent>KOPYTKO - AKTUALIZACJA</Kontrahent>
+    <Kontrahent>TEST</Kontrahent>
     <Nazwa_skrocona>nazwa skrocona</Nazwa_skrocona>
     <NIP>0</NIP>
     <Adress>Gdansk adres</Adress>

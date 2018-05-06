@@ -17,7 +17,9 @@ namespace MagazynAplikacja
     {
         List<Panel> listPanel = new List<Panel>();
         public XmlSerializer xs;
+        public XmlSerializer xs2;
         List<Dostawcy> listDostawcy;
+        List<Produkty> listProdukty;
 
         //Przypisanie własności listy do listyDostawców oraz utworzenie odwołania do XmlSerializer'a
         public Form1()
@@ -26,12 +28,16 @@ namespace MagazynAplikacja
 
             listDostawcy = new List<Dostawcy>();
             xs = new XmlSerializer(typeof(List<Dostawcy>));
+            listProdukty = new List<Produkty>();
+            xs2 = new XmlSerializer(typeof(List<Produkty>));
         }
 
         //PRzy starcie apki załaduje do listy wszystkie mozliwe panele w celu łatwiejszej organizacji 
         private void Form1_Load(object sender, EventArgs e)
         {
             Btn_Dostawca_Import.PerformClick();
+            Btn_Produkty_Import.PerformClick();
+
 
             listPanel.Add(panel_Magazyn);           // 0
             listPanel.Add(panel_Zamowienia);        // 1
@@ -238,6 +244,22 @@ namespace MagazynAplikacja
 
             Edycja_Dostawca.ShowDialog();
             Btn_Dostawca_Import.PerformClick();
+        }
+
+        //---------------------------------------------------------------------------------------------------------------
+        //---------------------------------------------------------------------------------------------------------------
+        //---------------------------------------------------------------------------------------------------------------
+        //---------------------------------------------------------------------------------------------------------------
+        //---------------------------------------------------------------------------------------------------------------
+        //---------------------------------------------------------------------------------------------------------------
+
+        private void Btn_Produkty_Import_Click(object sender, EventArgs e)
+        {
+            FileStream fs2 = new FileStream("..\\..\\Pliki XML\\Produkty.xml", FileMode.Open, FileAccess.Read);
+            listProdukty = (List<Produkty>)xs2.Deserialize(fs2);
+
+            dataGridView3.DataSource = listProdukty;
+            fs2.Close();
         }
 
     }
