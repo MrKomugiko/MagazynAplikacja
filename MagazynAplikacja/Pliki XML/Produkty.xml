@@ -2,15 +2,15 @@
 <ArrayOfProdukty xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Produkty>
     <Id>0</Id>
-    <Nazwa>ASUS GL552VW</Nazwa>
-    <Opis>Laptop</Opis>
-    <EAN>123123123</EAN>
-    <Cena_Netto>2925.23</Cena_Netto>
-    <Vat>23%</Vat>
-    <Wartosc_VAT>873.77</Wartosc_VAT>
-    <Cena_Brutto>3799.00</Cena_Brutto>
-    <Dostawca_ID>1000</Dostawca_ID>
-    <Grupa>Elektronika</Grupa>
+    <Nazwa>0</Nazwa>
+    <Opis>0</Opis>
+    <EAN>0</EAN>
+    <Cena_Netto>0</Cena_Netto>
+    <Vat>0</Vat>
+    <Wartosc_VAT>0</Wartosc_VAT>
+    <Cena_Brutto>0</Cena_Brutto>
+    <Dostawca_ID>0</Dostawca_ID>
+    <Grupa>0</Grupa>
   </Produkty>
   <Produkty>
     <Id>1</Id>
@@ -18,7 +18,7 @@
     <Opis>Laptop</Opis>
     <EAN>123123123</EAN>
     <Cena_Netto>2925.23</Cena_Netto>
-    <Vat>23%</Vat>
+    <Vat>23</Vat>
     <Wartosc_VAT>873.77</Wartosc_VAT>
     <Cena_Brutto>3799.00</Cena_Brutto>
     <Dostawca_ID>1000</Dostawca_ID>

@@ -31,12 +31,12 @@ namespace MagazynAplikacja
             listDostawcy = (List<Dostawcy>)xs.Deserialize(fs1);         //WCZYTANIE XML DO LISTY DOSTAWCOW
             fs1.Close();
 
-            listDostawcy[Convert.ToInt32(Label_ID.Text) - 1000].Kontrahent = TextBox_Firma.Text;
-            listDostawcy[Convert.ToInt32(Label_ID.Text) - 1000].Nazwa_skrocona = TextBox_Nazwa.Text;
-            listDostawcy[Convert.ToInt32(Label_ID.Text) - 1000].NIP = Convert.ToInt64(TextBox_NIP.Text);
-            listDostawcy[Convert.ToInt32(Label_ID.Text) - 1000].Adress = TextBox_Adres.Text;
-            listDostawcy[Convert.ToInt32(Label_ID.Text) - 1000].Miejscowosc = TextBox_Miejscowosc.Text;
-            listDostawcy[Convert.ToInt32(Label_ID.Text) - 1000].Kod = TextBox_Kod.Text;
+            listDostawcy[Convert.ToInt32(Label_ID.Text) - 999].Kontrahent = TextBox_Firma.Text;
+            listDostawcy[Convert.ToInt32(Label_ID.Text) - 999].Nazwa_skrocona = TextBox_Nazwa.Text;
+            listDostawcy[Convert.ToInt32(Label_ID.Text) - 999].NIP = Convert.ToInt64(TextBox_NIP.Text);
+            listDostawcy[Convert.ToInt32(Label_ID.Text) - 999].Adress = TextBox_Adres.Text;
+            listDostawcy[Convert.ToInt32(Label_ID.Text) - 999].Miejscowosc = TextBox_Miejscowosc.Text;
+            listDostawcy[Convert.ToInt32(Label_ID.Text) - 999].Kod = TextBox_Kod.Text;
 
             FileStream fs = new FileStream("..\\..\\Pliki XML\\ListaDostawcow.xml", FileMode.Create, FileAccess.Write);
             xs.Serialize(fs, listDostawcy);                              //ZAPISANIE CAŁEJ LISTY DO XML
